@@ -1,24 +1,22 @@
-import React from 'react'
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  Redirect
-  } from "react-router-dom";
-  import HomePage from './pages/HomePage'
+  Redirect,
+} from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
 export default function App() {
   return (
     <Router>
-        <Switch>
-          <Route path="/">
-             <HomePage/>
-          </Route>
-          <Route path="/sobre">
-             oi
-          </Route>
-        </Switch>
+      <Switch>
+        <Route path="/sobre">oi</Route>
+        <Route path="/home">
+          <HomePage />
+        </Route>
+        <Redirect to={{ pathname: '/home' }} />
+      </Switch>
     </Router>
   );
 }
