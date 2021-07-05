@@ -1,12 +1,12 @@
 export const data = [
   {
     id: 1,
-    name: 'Tua mãe',
-    img: '/img/caraio.png',
+    name: 'Sorvete',
+    img: '/img/sorvete.png',
   },
   {
-    id: 1,
-    name: 'Tua mãe',
-    img: '/img/caraio.png',
+    id: 2,
+    name: 'Açai',
+    img: '/img/acai.png',
   },
 ];
