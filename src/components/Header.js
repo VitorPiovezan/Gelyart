@@ -1,22 +1,11 @@
 import { useState, useEffect } from 'react';
-import List from '@material-ui/core/List';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import Icon from '@material-ui/core/Icon';
-import { Header as Head } from '../components/Styled.Header';
+import { Header as Head, NavLink } from '../styles/Styled.Header';
+import { Container } from '../styles/Styled.Home';
 import { Link } from 'react-router-dom';
+import { MenuDeviceComponent } from './MenuDevice';
 
-export default function Header({ colorheader, colorMenu }) {
-  const [anchorEl, setAnchorEl] = useState(null);
+export default function Header({ colorheader, colorheaderPos, colorMenu, mudaScreen }) {
   const [mudaHeader, setMudaHeader] = useState(false);
-
-  const handleClickListItem = event => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   useEffect(() => {
     function posicaoScroll() {
@@ -30,69 +19,32 @@ export default function Header({ colorheader, colorMenu }) {
     window.addEventListener('scroll', posicaoScroll);
   }, []);
 
-  return (
+  return (<Container>
     <Head
-      acao={mudaHeader ? colorheader : ''}
+      acao={mudaHeader ? colorheaderPos : colorheader}
       acaoHeight={mudaHeader ? '4rem' : '6rem'}
     >
-      <img
+      <Link to={'/'} style={{
+          marginLeft: '10%',display: 'flex', alignItems: 'center', justifyContent: 'center'}}><img
         alt="logotipo"
         src="/img/logotipo.png"
         style={{
           maxWidth: `${mudaHeader ? '4rem' : '6rem'}`,
-          marginLeft: '10%',
           transition: '0.2s',
         }}
-      />
+      /></Link>
       <div
         style={{
           marginRight: '10%',
         }}
       >
-        <List
-          component="nav"
-          aria-label="Device settings"
-          onClick={handleClickListItem}
-        >
-          <div
-            style={{
-              width: `${mudaHeader ? '2rem' : '3rem'}`,
-              height: `${mudaHeader ? '2rem' : '3rem'}`,
-              background: `${colorMenu}`,
-              borderRadius: '50%',
-              display: 'flex',
-              flex: 1,
-              justifyContent: 'center',
-              alignItems: 'center',
-              transition: '0.2s',
-            }}
-          >
-            <Icon
-              fontSize={`${mudaHeader ? '' : 'large'}`}
-              style={{ transition: '0.2s', color: 'white' }}
-            >
-              menu
-            </Icon>
-          </div>
-        </List>
-        <Menu
-          id="lock-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          <MenuItem component={Link} to={'/'}>
-            Home
-          </MenuItem>
-          <MenuItem component={Link} to={'/sobre'}>
-            Sobre
-          </MenuItem>
-          <MenuItem component={Link} to={'/'}>
-            Produtos
-          </MenuItem>
-        </Menu>
+        {mudaScreen ? <div style={{color: 'white'}}>
+          <Link style={{color: 'white', textDecoration: 'none', padding: '10px', fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`, transition:'0.2s'}} to={'/'}>Home</Link>
+          <Link style={{color: 'white', textDecoration: 'none', padding: '10px', fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`, transition:'0.2s'}} to={'/sobre'}>Sobre</Link>
+          <Link style={{color: 'white', textDecoration: 'none', padding: '10px', fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`, transition:'0.2s'}} to={'/'}>Produtos</Link>
+          </div> : 
+        <MenuDeviceComponent mudaHeader={mudaHeader} colorMenu={colorMenu}/>}
       </div>
-    </Head>
+    </Head></Container>
   );
 }
