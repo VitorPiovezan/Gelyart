@@ -9,12 +9,12 @@ import HomePage from './pages/HomePage';
 import Sobre from './pages/Sobre';
 
 export default function App() {
-  const [mudaScreen, setMudaScreen] = useState(window.innerWidth > 950 ? true : false);
+  const [mudaScreen, setMudaScreen] = useState(window.innerWidth > 1050 ? true : false);
 
   useEffect(() => {
     
     function posicaoScreen() {
-      if (window.innerWidth > 950) {
+      if (window.innerWidth > 1050) {
         setMudaScreen(true);
       } else {
         setMudaScreen(false);
