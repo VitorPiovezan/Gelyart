@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const Header = styled.header`
   height: ${props => props.acaoHeight};
   display: flex;
@@ -14,5 +13,5 @@ export const Header = styled.header`
 
 export const NavLink = styled.p`
   text-decoration: none;
-  color: white
-`
+  color: white;
+`;
