@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from '../styles/Styled.Home';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import { FT } from '../styles/Styled.Footer';
 import { Link } from 'react-router-dom';
 import Icon from '@material-ui/core/Icon';
 
@@ -14,18 +15,9 @@ export default function Footer({ mudaScreen }) {
         marginTop: '1rem',
       }}
     >
-      <div
-        className="FT"
-        style={{
-          width: '900px',
-          minWidth: '300px',
-          display: 'flex',
-          alignItems: `${mudaScreen ? 'center' : ''}`,
-          justifyContent: 'space-between',
-          color: 'white',
-          padding: '30px 40px',
-          flexDirection: `${mudaScreen ? 'row' : 'column'}`,
-        }}
+      <FT
+        items={`${mudaScreen ? 'center' : ''}`}
+        flex={`${mudaScreen ? 'row' : 'column'}`}
       >
         <div
           className="FTContato"
@@ -43,7 +35,7 @@ export default function Footer({ mudaScreen }) {
           </p>
         </div>
         <div className="FTRedesSociais">
-          <p style={{ fontSize: '1rem', fontWeight: 'bold' }}>Resdes Sociais</p>
+          <p style={{ fontSize: '1rem', fontWeight: 'bold' }}>Redes Sociais</p>
           <a
             rel="noreferrer"
             href="https://facebook.com"
@@ -61,7 +53,7 @@ export default function Footer({ mudaScreen }) {
             <InstagramIcon style={{ fontSize: '2rem' }} />
           </a>
         </div>
-      </div>
+      </FT>
     </Container>
   );
 }
