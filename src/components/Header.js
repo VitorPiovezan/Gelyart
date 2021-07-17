@@ -24,6 +24,18 @@ export default function Header({
     window.addEventListener('scroll', posicaoScroll);
   }, []);
 
+  function handleScroll() {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0,
+    });
+  }
+
+  // caso queria dar scroll suave para uma parte do seu código
+  // function handleProdutos() {
+  //   document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' });
+  // }
+
   return (
     <Container>
       <Head
@@ -38,6 +50,7 @@ export default function Header({
             alignItems: 'center',
             justifyContent: 'center',
           }}
+          onClick={handleScroll}
         >
           <img
             alt="logotipo"
@@ -87,7 +100,7 @@ export default function Header({
                   fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`,
                   transition: '0.2s',
                 }}
-                to={'/'}
+                to={'/produtos'}
               >
                 Produtos
               </Link>

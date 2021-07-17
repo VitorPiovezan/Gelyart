@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,12 +9,13 @@ import HomePage from './pages/HomePage';
 import Sobre from './pages/Sobre';
 
 export default function App() {
-  const [mudaScreen, setMudaScreen] = useState(window.innerWidth > 1050 ? true : false);
+  const [mudaScreen, setMudaScreen] = useState(
+    window.innerWidth > 900 ? true : false
+  );
 
   useEffect(() => {
-    
     function posicaoScreen() {
-      if (window.innerWidth > 1050) {
+      if (window.innerWidth > 900) {
         setMudaScreen(true);
       } else {
         setMudaScreen(false);
@@ -27,7 +28,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route path="/sobre">
-          <Sobre mudaScreen={mudaScreen}/>
+          <Sobre mudaScreen={mudaScreen} />
         </Route>
         <Route path="/home">
           <HomePage mudaScreen={mudaScreen} />

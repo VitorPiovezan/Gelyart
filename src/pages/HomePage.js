@@ -3,26 +3,37 @@ import Footer from '../components/Footer';
 import { categorias } from '../data/data';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ContainerHome } from '../styles/Styled.Home';
+import {
+  ContainerHome,
+  ImgSlider,
+  DivSlider,
+  ProdutosSlider,
+} from '../styles/Styled.Home';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
+import { SampleNextArrow, SamplePrevArrow } from '../configs/configs';
 
 export default function HomePage({ mudaScreen }) {
+  //configurações do slider
   var settings = {
     dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 4,
+    infinite: true,
+    speed: 700,
+    slidesToShow: mudaScreen ? 3 : 1,
+    slidesToScroll: mudaScreen ? 3 : 1,
     initialSlide: 0,
+    autoplay: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    focusOnSelect: true,
+    centerMode: mudaScreen ? false : true,
+    swipe: mudaScreen ? false : true,
+    arrows: mudaScreen ? true : false,
   };
-  console.info(0);
-  setTimeout(() => console.info(1), 0);
-  console.info(2);
+
   return (
-    <div
-      style={{
-        maxWidth: '100%',
-      }}
-    >
+    <>
       <img
         alt="background"
         src={
@@ -43,41 +54,28 @@ export default function HomePage({ mudaScreen }) {
       />
 
       <ContainerHome>
-        <h1 style={{ color: '#286198', textAlign: 'center' }}>
+        <h1 id="produtos" style={{ color: '#286198', textAlign: 'center' }}>
           CONHEÇA NOSSA LINHA DE PRODUTOS
         </h1>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-          }}
-        >
-          {categorias.map(item => {
-            return (
-              <div key={item.id}>
-                <Link to={'/'}>
-                  <div style={{ width: '300px', padding: '20px 20px' }}>
-                    <img
-                      alt={item.name}
-                      style={{
-                        width: '100%',
-                        borderRadius: '20px ',
-                        boxShadow: '4px 4px 4px 3px rgba(0, 0, 0, 0.2)',
-                      }}
-                      src={item.banner}
-                    />
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+        <ProdutosSlider widthScreen={`${mudaScreen ? '90%' : '100%'}`}>
+          <Slider {...settings}>
+            {categorias.map(item => {
+              return (
+                <div key={item.id} style={{ width: '100%' }}>
+                  <Link to={'/sobre'}>
+                    <DivSlider>
+                      <ImgSlider alt={item.name} src={item.banner} />
+                    </DivSlider>
+                  </Link>
+                </div>
+              );
+            })}
+          </Slider>
+        </ProdutosSlider>
       </ContainerHome>
 
       <Footer mudaScreen={mudaScreen} />
-    </div>
+    </>
   );
 }

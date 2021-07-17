@@ -14,4 +14,24 @@ export const ContainerHome = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 1200px;
+  padding: 0 0 30px 0;
+`;
+export const ImgSlider = styled.img`
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+`;
+
+export const DivSlider = styled.div`
+  width: 90%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+`;
+
+export const ProdutosSlider = styled.div`
+  width: ${props => props.widthScreen};
+  height: 100%;
+  z-index: 1;
 `;

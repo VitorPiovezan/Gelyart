@@ -1,7 +1,5 @@
 import React from 'react';
 import { Container } from '../styles/Styled.Home';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import { FT } from '../styles/Styled.Footer';
 import { Link } from 'react-router-dom';
 import Icon from '@material-ui/core/Icon';
@@ -42,7 +40,7 @@ export default function Footer({ mudaScreen }) {
             target="_blank"
             style={{ textDecoration: 'none', color: 'white' }}
           >
-            <FacebookIcon style={{ fontSize: '2rem' }} />
+            <Icon style={{ fontSize: '2rem' }}>facebook</Icon>
           </a>
           <a
             rel="noreferrer"
@@ -50,7 +48,7 @@ export default function Footer({ mudaScreen }) {
             target="_blank"
             style={{ textDecoration: 'none', color: 'white' }}
           >
-            <InstagramIcon style={{ fontSize: '2rem' }} />
+            <Icon style={{ fontSize: '2rem' }}>instagram</Icon>
           </a>
         </div>
       </FT>

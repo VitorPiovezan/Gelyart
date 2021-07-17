@@ -9,6 +9,7 @@ export const Header = styled.header`
   background: ${props => props.acao};
   transition: 0.2s;
   top: 0;
+  z-index: 2;
 `;
 
 export const NavLink = styled.p`
