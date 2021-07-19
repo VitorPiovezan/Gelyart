@@ -79,7 +79,7 @@ export default function HomePage({ mudaScreen }) {
                 <div key={item.id} style={{ width: '100%' }}>
                   <div onMouseMove={() => setMouseMoved(true)}
                         onMouseDown={() => setMouseMoved(false)}
-                        onMouseUp={() => handleClick(`/produtos/${item.name}`)}
+                        onMouseUp={() => handleClick(`/produtos/${item.link}`)}
                         style={{cursor: 'pointer'}}>
                     <DivSlider>
                       <ImgSlider alt={item.name} src={item.banner} />
