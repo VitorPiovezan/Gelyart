@@ -77,6 +77,7 @@ export default function Header({
                   transition: '0.2s',
                 }}
                 to={'/'}
+                onClick={handleScroll}
               >
                 Home
               </Link>
@@ -89,6 +90,7 @@ export default function Header({
                   transition: '0.2s',
                 }}
                 to={'/sobre'}
+                onClick={handleScroll}
               >
                 Sobre
               </Link>
@@ -101,6 +103,7 @@ export default function Header({
                   transition: '0.2s',
                 }}
                 to={'/produtos'}
+                onClick={handleScroll}
               >
                 Produtos
               </Link>

@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Sobre from './pages/Sobre';
+import Categorias from './pages/Categorias';
 
 export default function App() {
   const [mudaScreen, setMudaScreen] = useState(
@@ -29,6 +30,9 @@ export default function App() {
       <Switch>
         <Route path="/sobre">
           <Sobre mudaScreen={mudaScreen} />
+        </Route>
+        <Route path="/produtos/:name">
+          <Categorias mudaScreen={mudaScreen} />
         </Route>
         <Route path="/home">
           <HomePage mudaScreen={mudaScreen} />

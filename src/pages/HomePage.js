@@ -2,7 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { categorias } from '../data/data';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {
   ContainerHome,
   ImgSlider,
@@ -28,9 +28,23 @@ export default function HomePage({ mudaScreen }) {
     prevArrow: <SamplePrevArrow />,
     focusOnSelect: true,
     centerMode: mudaScreen ? false : true,
-    swipe: mudaScreen ? false : true,
+    // swipe: mudaScreen ? false : true,
     arrows: mudaScreen ? true : false,
   };
+  
+  const history = useHistory();
+  const [mouseMoved, setMouseMoved] = useState(false);
+  // console.log(r)
+  const handleClick = (link) => {
+      if (!mouseMoved) {
+      history.push(link);
+      window.scrollTo({
+        behavior: 'smooth',
+        top: 0,
+      });
+      }
+  };
+  
 
   return (
     <>
@@ -63,11 +77,14 @@ export default function HomePage({ mudaScreen }) {
             {categorias.map(item => {
               return (
                 <div key={item.id} style={{ width: '100%' }}>
-                  <Link to={'/sobre'}>
+                  <div onMouseMove={() => setMouseMoved(true)}
+                        onMouseDown={() => setMouseMoved(false)}
+                        onMouseUp={() => handleClick(`/produtos/${item.name}`)}
+                        style={{cursor: 'pointer'}}>
                     <DivSlider>
                       <ImgSlider alt={item.name} src={item.banner} />
                     </DivSlider>
-                  </Link>
+                  </div>
                 </div>
               );
             })}
