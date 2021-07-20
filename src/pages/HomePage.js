@@ -91,6 +91,24 @@ export default function HomePage({ mudaScreen }) {
             })}
           </Slider>
         </ProdutosSlider>
+        <button
+          style={{
+            fontSize: '1.2rem',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            color: '#fff',
+            padding: '0.6rem',
+            width: `${mudaScreen ? '30%' : '70%'}`,
+            borderRadius: '50px',
+            backgroundColor: '#286198',
+            marginTop: '3rem',
+            boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
+            border: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Veja toda nossa linha
+        </button>
       </ContainerHome>
 
       <div style={{ width: '100%' }}>
@@ -103,17 +121,79 @@ export default function HomePage({ mudaScreen }) {
           <img
             alt="frezer"
             src="/img/produtos/freezer-horizontal-gellyart.png"
-            style={{ maxWidth: '65%', marginBottom: '-21rem' }}
+            style={{
+              maxWidth: `${mudaScreen ? '40%' : '70%'}`,
+              marginLeft: `${mudaScreen ? '15%' : '15%'}`,
+              marginBottom: `${mudaScreen ? '-23rem' : '-14rem'}`,
+            }}
           />
         </div>
+
         <div
           style={{
             backgroundColor: '#286198',
             width: '100%',
-            height: '20rem',
+            height: `${mudaScreen ? '20rem' : '25rem'}`,
+            display: 'flex',
+            justifyContent: 'center',
+            paddingBottom: `${mudaScreen ? '' : '2rem'}`,
           }}
-        ></div>
+        >
+          <div
+            style={{
+              width: '1200px',
+              display: `${mudaScreen ? '' : 'flex'}`,
+              justifyContent: `${mudaScreen ? '' : 'center'}`,
+            }}
+          >
+            <div
+              style={{
+                width: '30%',
+                marginLeft: `${mudaScreen ? '65%' : ''}`,
+                marginTop: `${mudaScreen ? '4rem' : '12rem'}`,
+                fontSize: '2rem',
+                color: '#fff',
+                display: `${mudaScreen ? '' : 'flex'}`,
+                alignItems: `${mudaScreen ? '' : 'center'}`,
+                flexDirection: 'column',
+              }}
+            >
+              <p style={{ marginBottom: '-0.1rem' }}>Seja um</p>
+              <strong>Revendedor</strong>
+              <button
+                style={{
+                  fontSize: '1.2rem',
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  color: '#fff',
+                  padding: '0.6rem',
+                  width: `${mudaScreen ? '50%' : '120%'}`,
+                  borderRadius: '50px',
+                  backgroundColor: '#fdc500',
+                  marginTop: '1rem',
+                  boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+              >
+                Confira Já!
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {mudaScreen ? (
+        ''
+      ) : (
+        <div
+          style={{
+            width: '100%',
+            height: '0.1rem',
+            backgroundColor: '#aaa',
+          }}
+        />
+      )}
 
       <Footer mudaScreen={mudaScreen} />
     </>

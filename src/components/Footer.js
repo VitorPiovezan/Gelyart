@@ -3,6 +3,7 @@ import { Container } from '../styles/Styled.Home';
 import { FT } from '../styles/Styled.Footer';
 import { Link } from 'react-router-dom';
 import Icon from '@material-ui/core/Icon';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 export default function Footer({ mudaScreen }) {
   return (
@@ -47,7 +48,7 @@ export default function Footer({ mudaScreen }) {
             target="_blank"
             style={{ textDecoration: 'none', color: 'white' }}
           >
-            <Icon style={{ fontSize: '2rem' }}>instagram</Icon>
+            <InstagramIcon style={{ fontSize: '2rem' }} />
           </a>
         </div>
       </FT>
