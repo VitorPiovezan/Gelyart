@@ -10,7 +10,6 @@ export default function Footer({ mudaScreen }) {
       style={{
         height: `${mudaScreen ? '200px' : '330px'}`,
         backgroundColor: '#2b6199',
-        marginTop: '1rem',
       }}
     >
       <FT

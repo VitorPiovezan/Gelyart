@@ -31,20 +31,19 @@ export default function HomePage({ mudaScreen }) {
     // swipe: mudaScreen ? false : true,
     arrows: mudaScreen ? true : false,
   };
-  
+
   const history = useHistory();
   const [mouseMoved, setMouseMoved] = useState(false);
   // console.log(r)
-  const handleClick = (link) => {
-      if (!mouseMoved) {
+  const handleClick = link => {
+    if (!mouseMoved) {
       history.push(link);
       window.scrollTo({
         behavior: 'smooth',
         top: 0,
       });
-      }
+    }
   };
-  
 
   return (
     <>
@@ -77,10 +76,12 @@ export default function HomePage({ mudaScreen }) {
             {categorias.map(item => {
               return (
                 <div key={item.id} style={{ width: '100%' }}>
-                  <div onMouseMove={() => setMouseMoved(true)}
-                        onMouseDown={() => setMouseMoved(false)}
-                        onMouseUp={() => handleClick(`/produtos/${item.link}`)}
-                        style={{cursor: 'pointer'}}>
+                  <div
+                    onMouseMove={() => setMouseMoved(true)}
+                    onMouseDown={() => setMouseMoved(false)}
+                    onMouseUp={() => handleClick(`/produtos/${item.link}`)}
+                    style={{ cursor: 'pointer' }}
+                  >
                     <DivSlider>
                       <ImgSlider alt={item.name} src={item.banner} />
                     </DivSlider>
@@ -91,6 +92,28 @@ export default function HomePage({ mudaScreen }) {
           </Slider>
         </ProdutosSlider>
       </ContainerHome>
+
+      <div style={{ width: '100%' }}>
+        <div
+          style={{
+            maxWidth: '1200px',
+            margin: 'auto',
+          }}
+        >
+          <img
+            alt="frezer"
+            src="/img/produtos/freezer-horizontal-gellyart.png"
+            style={{ maxWidth: '65%', marginBottom: '-21rem' }}
+          />
+        </div>
+        <div
+          style={{
+            backgroundColor: '#286198',
+            width: '100%',
+            height: '20rem',
+          }}
+        ></div>
+      </div>
 
       <Footer mudaScreen={mudaScreen} />
     </>
