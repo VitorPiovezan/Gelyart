@@ -3,7 +3,6 @@ import { Container } from '../styles/Styled.Home';
 import { FT } from '../styles/Styled.Footer';
 import { Link } from 'react-router-dom';
 import Icon from '@material-ui/core/Icon';
-import InstagramIcon from '@material-ui/icons/Instagram';
 
 export default function Footer({ mudaScreen }) {
   return (
@@ -11,6 +10,7 @@ export default function Footer({ mudaScreen }) {
       style={{
         height: `${mudaScreen ? '200px' : '330px'}`,
         backgroundColor: '#2b6199',
+        fontFamily: 'Segoe UI',
       }}
     >
       <FT
@@ -48,7 +48,15 @@ export default function Footer({ mudaScreen }) {
             target="_blank"
             style={{ textDecoration: 'none', color: 'white' }}
           >
-            <InstagramIcon style={{ fontSize: '2rem' }} />
+            <img
+              alt="instagram"
+              src="/img/logo/instagram.png"
+              style={{
+                width: '1.8rem',
+                marginBottom: '2px',
+                marginLeft: '5px',
+              }}
+            />
           </a>
         </div>
       </FT>

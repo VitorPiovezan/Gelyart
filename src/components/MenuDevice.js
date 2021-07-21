@@ -8,7 +8,7 @@ import { Container } from '../styles/Styled.Home';
 import { Link } from 'react-router-dom';
 import { ListItem } from '@material-ui/core';
 
-export function MenuDeviceComponent({mudaHeader, colorMenu}) {
+export function MenuDeviceComponent({ mudaHeader, colorMenu }) {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClickListItem = event => {
@@ -18,51 +18,58 @@ export function MenuDeviceComponent({mudaHeader, colorMenu}) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  function handleScroll() {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0,
+    });
+  }
   return (
     <>
       <List
-          component="nav"
-          aria-label="Device settings"
-          onClick={handleClickListItem}
+        component="nav"
+        aria-label="Device settings"
+        onClick={handleClickListItem}
+      >
+        <div
+          style={{
+            width: `${mudaHeader ? '2rem' : '3rem'}`,
+            height: `${mudaHeader ? '2rem' : '3rem'}`,
+            background: `${colorMenu}`,
+            borderRadius: '50%',
+            display: 'flex',
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            transition: '0.2s',
+          }}
         >
-          <div
-            style={{
-              width: `${mudaHeader ? '2rem' : '3rem'}`,
-              height: `${mudaHeader ? '2rem' : '3rem'}`,
-              background: `${colorMenu}`,
-              borderRadius: '50%',
-              display: 'flex',
-              flex: 1,
-              justifyContent: 'center',
-              alignItems: 'center',
-              transition: '0.2s',
-            }}
+          <Icon
+            fontSize={`${mudaHeader ? '' : 'large'}`}
+            style={{ transition: '0.2s', color: 'white' }}
           >
-            <Icon
-              fontSize={`${mudaHeader ? '' : 'large'}`}
-              style={{ transition: '0.2s', color: 'white' }}
-            >
-              menu
-            </Icon>
-          </div>
-        </List>
-        <Menu
-          id="lock-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          <MenuItem component={Link} to={'/'}>
-            Home
-          </MenuItem>
-          <MenuItem component={Link} to={'/sobre'}>
-            Sobre
-          </MenuItem>
-          <MenuItem component={Link} to={'/'}>
-            Produtos
-          </MenuItem>
-        </Menu>
+            menu
+          </Icon>
+        </div>
+      </List>
+      <Menu
+        id="lock-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem component={Link} to={'/'} onClick={handleScroll}>
+          Home
+        </MenuItem>
+        <MenuItem component={Link} to={'/sobre'} onClick={handleScroll}>
+          Sobre
+        </MenuItem>
+        <MenuItem component={Link} to={'/'} onClick={handleScroll}>
+          Produtos
+        </MenuItem>
+      </Menu>
     </>
-  )
+  );
 }

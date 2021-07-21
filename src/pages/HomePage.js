@@ -67,7 +67,14 @@ export default function HomePage({ mudaScreen }) {
       />
 
       <ContainerHome>
-        <h1 id="produtos" style={{ color: '#286198', textAlign: 'center' }}>
+        <h1
+          id="produtos"
+          style={{
+            color: '#286198',
+            textAlign: 'center',
+            fontSize: `${mudaScreen ? '' : '1.7rem'}`,
+          }}
+        >
           CONHEÇA NOSSA LINHA DE PRODUTOS
         </h1>
 
@@ -150,8 +157,8 @@ export default function HomePage({ mudaScreen }) {
               style={{
                 width: '30%',
                 marginLeft: `${mudaScreen ? '65%' : ''}`,
-                marginTop: `${mudaScreen ? '4rem' : '12rem'}`,
-                fontSize: '2rem',
+                marginTop: `${mudaScreen ? '4rem' : '13rem'}`,
+                fontSize: `${mudaScreen ? '2rem' : '1.7rem'}`,
                 color: '#fff',
                 display: `${mudaScreen ? '' : 'flex'}`,
                 alignItems: `${mudaScreen ? '' : 'center'}`,
