@@ -130,7 +130,7 @@ export default function HomePage({ mudaScreen }) {
         >
           <img
             alt="frezer"
-            src="/img/produtos/freezer-horizontal-gellyart.png"
+            src="/img/produtos/freezer-horizontal-gellyart-min.png"
             style={{
               maxWidth: `${mudaScreen ? '40%' : '70%'}`,
               marginLeft: `${mudaScreen ? '15%' : '15%'}`,
