@@ -75,7 +75,7 @@ export default function HomePage({ mudaScreen }) {
           style={{
             color: '#286198',
             textAlign: 'center',
-            fontSize: `${mudaScreen ? '' : '1.7rem'}`,
+            fontSize: `${mudaScreen ? '' : '1.4rem'}`,
           }}
         >
           CONHEÇA NOSSA LINHA DE PRODUTOS
@@ -85,7 +85,7 @@ export default function HomePage({ mudaScreen }) {
           <Slider {...settings}>
             {categorias.map(item => {
               return (
-                <div key={item.id} style={{ width: '100%' }}>
+                <div key={item.id} style={{ width: '100%'}}>
                   <div
                     onMouseMove={() => setMouseMoved(true)}
                     onMouseDown={() => setMouseMoved(false)}
@@ -161,7 +161,7 @@ export default function HomePage({ mudaScreen }) {
                 width: '30%',
                 marginLeft: `${mudaScreen ? '65%' : ''}`,
                 marginTop: `${mudaScreen ? '4rem' : '13rem'}`,
-                fontSize: `${mudaScreen ? '2rem' : '1.7rem'}`,
+                fontSize: `${mudaScreen ? '2rem' : '1.4rem'}`,
                 color: '#fff',
                 display: `${mudaScreen ? '' : 'flex'}`,
                 alignItems: `${mudaScreen ? '' : 'center'}`,

@@ -25,7 +25,7 @@ export const ImgSlider = styled.img`
 
 export const DivSlider = styled.div`
   width: 90%;
-  padding: 20px 20px;
+  padding: 20px 15px;
   display: flex;
   justify-content: center;
 `;
