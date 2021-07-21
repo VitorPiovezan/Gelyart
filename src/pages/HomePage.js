@@ -46,7 +46,7 @@ export default function HomePage({ mudaScreen }) {
   };
 
   return (
-    <>
+    <div style={{minWidth: '380px'}}>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <img
           alt="background"
@@ -206,6 +206,6 @@ export default function HomePage({ mudaScreen }) {
       )}
 
       <Footer mudaScreen={mudaScreen} />
-    </>
+    </div>
   );
 }
