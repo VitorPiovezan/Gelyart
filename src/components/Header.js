@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Header as Head, NavLink } from '../styles/Styled.Header';
-import { Container } from '../styles/Styled.Home';
 import { Link } from 'react-router-dom';
 import { MenuDeviceComponent } from './MenuDevice';
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container } from '../styles/Styled.Home';
+import { ContainerFooter } from '../styles/Styled.Footer';
 import { FT } from '../styles/Styled.Footer';
 import { Link } from 'react-router-dom';
 import Icon from '@material-ui/core/Icon';
 
 export default function Footer({ mudaScreen }) {
   return (
-    <Container
+    <ContainerFooter
       style={{
         height: `${mudaScreen ? '200px' : '330px'}`,
         backgroundColor: '#2b6199',
@@ -60,6 +60,6 @@ export default function Footer({ mudaScreen }) {
           </a>
         </div>
       </FT>
-    </Container>
+    </ContainerFooter>
   );
 }

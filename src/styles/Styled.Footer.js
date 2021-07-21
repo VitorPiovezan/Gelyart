@@ -9,3 +9,9 @@ export const FT = styled.div`
   padding: 30px 40px;
   flex-direction: ${props => props.flex};
 `;
+
+export const ContainerFooter = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;

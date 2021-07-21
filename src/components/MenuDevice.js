@@ -3,10 +3,7 @@ import List from '@material-ui/core/List';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Icon from '@material-ui/core/Icon';
-import { Header as Head } from '../styles/Styled.Header';
-import { Container } from '../styles/Styled.Home';
 import { Link } from 'react-router-dom';
-import { ListItem } from '@material-ui/core';
 
 export function MenuDeviceComponent({ mudaHeader, colorMenu }) {
   const [anchorEl, setAnchorEl] = useState(null);
