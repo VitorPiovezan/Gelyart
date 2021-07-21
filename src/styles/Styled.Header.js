@@ -3,7 +3,7 @@ export const Header = styled.header`
   height: ${props => props.acaoHeight};
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: fixed;
   width: 100%;
   background: ${props => props.acao};

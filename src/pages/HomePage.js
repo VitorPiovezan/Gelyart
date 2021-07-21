@@ -47,17 +47,20 @@ export default function HomePage({ mudaScreen }) {
 
   return (
     <>
-      <img
-        alt="background"
-        src={
-          mudaScreen
-            ? '/img/background_homePage_desktop.jpg'
-            : '/img/background_homePage.jpg'
-        }
-        style={{
-          width: '100%',
-        }}
-      />
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <img
+          alt="background"
+          src={
+            mudaScreen
+              ? '/img/background_homePage_desktop.jpg'
+              : '/img/background_homePage.jpg'
+          }
+          style={{
+            width: '100%',
+            maxWidth: '1600px',
+          }}
+        />
+      </div>
 
       <Header
         colorheader={'rgba(0, 0, 0, 0)'}
