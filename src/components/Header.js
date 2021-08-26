@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Header as Head, NavLink } from '../styles/Styled.Header';
 import { Link } from 'react-router-dom';
 import { MenuDeviceComponent } from './MenuDevice';
+import { HandleScroll } from '../configs/configs';
 
 export default function Header({
   colorheader,
@@ -22,13 +23,6 @@ export default function Header({
 
     window.addEventListener('scroll', posicaoScroll);
   }, []);
-
-  function handleScroll() {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: 0,
-    });
-  }
 
   // caso queria dar scroll suave para uma parte do seu código
   // function handleProdutos() {
@@ -58,7 +52,7 @@ export default function Header({
               alignItems: 'center',
               justifyContent: 'center',
             }}
-            onClick={handleScroll}
+            onClick={HandleScroll}
           >
             <img
               alt="logotipo"
@@ -85,7 +79,7 @@ export default function Header({
                     transition: '0.2s',
                   }}
                   to={'/'}
-                  onClick={handleScroll}
+                  onClick={HandleScroll}
                 >
                   Home
                 </Link>
@@ -98,7 +92,7 @@ export default function Header({
                     transition: '0.2s',
                   }}
                   to={'/sobre'}
-                  onClick={handleScroll}
+                  onClick={HandleScroll}
                 >
                   Sobre
                 </Link>
@@ -111,7 +105,7 @@ export default function Header({
                     transition: '0.2s',
                   }}
                   to={'/produtos'}
-                  onClick={handleScroll}
+                  onClick={HandleScroll}
                 >
                   Produtos
                 </Link>

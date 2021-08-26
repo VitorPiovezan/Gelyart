@@ -8,6 +8,7 @@ import {
 import HomePage from './pages/HomePage';
 import Sobre from './pages/Sobre';
 import Categorias from './pages/Categorias';
+import Revendedor from './pages/Revendedor';
 
 export default function App() {
   const [mudaScreen, setMudaScreen] = useState(
@@ -36,6 +37,9 @@ export default function App() {
         </Route>
         <Route path="/home">
           <HomePage mudaScreen={mudaScreen} />
+        </Route>
+        <Route path="/seja-um-revendedor">
+          <Revendedor mudaScreen={mudaScreen} />
         </Route>
         <Redirect to={{ pathname: '/home' }} />
       </Switch>

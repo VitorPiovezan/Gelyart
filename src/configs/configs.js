@@ -31,3 +31,11 @@ export function SamplePrevArrow(props) {
     />
   );
 }
+
+
+export function HandleScroll() {
+  window.scrollTo({
+    behavior: 'smooth',
+    top: 0,
+  });
+}
