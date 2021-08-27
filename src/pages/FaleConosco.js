@@ -151,7 +151,7 @@ export default function Revendedor({ mudaScreen }) {
             <InputLong
               acao={mudaScreen ? '100%' : '95%'}
               type="text"
-              placeholder="Digite do seu e-mail"
+              placeholder="Digite seu e-mail"
               value={email}
               onChange={e => setEmail(e.target.value)}
             />

@@ -118,7 +118,7 @@ export default function Revendedor({ mudaScreen }) {
             <InputLong
               acao={mudaScreen ? '100%' : '95%'}
               type="text"
-              placeholder="Digite do seu negócio"
+              placeholder="Digite seu negócio"
               value={empresa}
               onChange={e => setEmpresa(e.target.value)}
             />
@@ -161,7 +161,7 @@ export default function Revendedor({ mudaScreen }) {
             <InputLong
               acao={mudaScreen ? '100%' : '95%'}
               type="text"
-              placeholder="Digite do seu e-mail"
+              placeholder="Digite seu e-mail"
               value={email}
               onChange={e => setEmail(e.target.value)}
             />
