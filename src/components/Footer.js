@@ -3,6 +3,7 @@ import { ContainerFooter } from '../styles/Styled.Footer';
 import { FT } from '../styles/Styled.Footer';
 import { Link } from 'react-router-dom';
 import Icon from '@material-ui/core/Icon';
+import { HandleScroll } from '../configs/configs';
 
 export default function Footer({ mudaScreen }) {
   return (
@@ -22,21 +23,33 @@ export default function Footer({ mudaScreen }) {
           style={{ width: `${mudaScreen ? '40%' : '90%'}` }}
         >
           <p style={{ fontSize: '1rem' }}>
-            <strong>Endereço: </strong>Rodovia Municipal Paraiso a Palmares, km
-            1,6, S/N na cidade de Paraiso-SP
+            <strong>Endereço: </strong>Sítio Gelyart - Rural, Paraíso - SP,
+            15825-000
           </p>
           <p style={{ fontSize: '1rem' }}>
-            <strong>Telefone/Whats: </strong>+55 00 00000-0000
+            <strong>Telefone/Whats: </strong>+55 17 3567-1318
           </p>
           <p style={{ fontSize: '0.8rem' }}>
             © 2021 Todos os Direitos Reservados © 2021 Gelyart Sorvetes
           </p>
         </div>
         <div className="FTRedesSociais">
+          <p style={{ fontSize: '1rem', fontWeight: 'bold' }}>Fale Conosco</p>
+          <Link
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              fontSize: '0.9rem',
+            }}
+            to={'/fale-conosco'}
+            onClick={HandleScroll}
+          >
+            Contate-nos
+          </Link>
           <p style={{ fontSize: '1rem', fontWeight: 'bold' }}>Redes Sociais</p>
           <a
             rel="noreferrer"
-            href="https://facebook.com"
+            href="https://facebook.com/gelyartsorvetes"
             target="_blank"
             style={{ textDecoration: 'none', color: 'white' }}
           >
@@ -44,7 +57,7 @@ export default function Footer({ mudaScreen }) {
           </a>
           <a
             rel="noreferrer"
-            href="https://instagram.com"
+            href="https://instagram.com/gelyartsorvetes"
             target="_blank"
             style={{ textDecoration: 'none', color: 'white' }}
           >

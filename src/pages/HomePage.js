@@ -1,14 +1,10 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RevendedorHome from '../components/Revendedor.Home';
-import {
-  ContainerHome,
-  Container
-} from '../styles/Styled.Home';
+import { ContainerHome, Container } from '../styles/Styled.Home';
 import LinhaProdutosHome from '../components/LinhaProdutos.Home';
 
 export default function HomePage({ mudaScreen }) {
-
   return (
     <Container>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -16,19 +12,19 @@ export default function HomePage({ mudaScreen }) {
           alt="background"
           src={
             mudaScreen
-              ? '/img/background_homePage_desktop.jpg'
-              : '/img/background_homePage.jpg'
+              ? '/img/background_homePage_desktop.png'
+              : '/img/background_homePage.png'
           }
           style={{
             width: '100%',
-            maxWidth: '1600px',
+            maxWidth: '100%',
           }}
         />
       </div>
 
       <Header
         colorheader={'rgba(0, 0, 0, 0)'}
-        colorheaderPos={'rgba(31, 18, 4, 0.8)'}
+        colorheaderPos={'rgba(0, 0, 0, 0.8)'}
         colorMenu={'rgb(31, 18, 4, 0.4)'}
         mudaScreen={mudaScreen}
       />
@@ -45,7 +41,7 @@ export default function HomePage({ mudaScreen }) {
           CONHEÇA NOSSA LINHA DE PRODUTOS
         </h1>
 
-        <LinhaProdutosHome mudaScreen={mudaScreen}/>
+        <LinhaProdutosHome mudaScreen={mudaScreen} />
 
         <button
           style={{
@@ -67,7 +63,7 @@ export default function HomePage({ mudaScreen }) {
         </button>
       </ContainerHome>
 
-      <RevendedorHome mudaScreen={mudaScreen}/>
+      <RevendedorHome mudaScreen={mudaScreen} />
 
       {mudaScreen ? (
         ''

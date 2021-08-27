@@ -13,6 +13,19 @@ export const InputLong = styled.input`
   }
 `;
 
+export const ImputLongTextArea = styled.textarea`
+  width: ${props => props.acao};
+  padding: 10px;
+  font-size: 12pt;
+  border-radius: 10px;
+  border: 0 none;
+  border: 1px solid #282828;
+  &:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
+`;
+
 export const LabelLong = styled.label`
   display: flex;
   flex-direction: column;

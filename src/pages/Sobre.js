@@ -55,27 +55,25 @@ export default function Sobre({ mudaScreen }) {
             }}
           >
             <div style={{ padding: '30px' }}>
-              <h2 style={{ color: '#2b6199' }}>Lorem Ipsum</h2>
+              <h2 style={{ color: '#2b6199' }}>Nossa História</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                placerat vestibulum neque ac dignissim. Fusce vulputate urna in
-                nisl fermentum aliquet vitae bibendum lectus. Phasellus sit amet
-                ornare elit. Aenean ac consectetur eros. Nam auctor eget arcu at
-                aliquet. Interdum et malesuada fames ac ante ipsum primis in
-                faucibus. Aliquam erat volutpat. Fusce porttitor ipsum at lectus
-                semper faucibus. Aliquam erat volutpat. Sed volutpat aliquet
-                enim vitae commodo. Sed suscipit felis vel eros scelerisque, eu
-                ultricies turpis congue.
+                Há mais de 30 anos a Gelyart Sorvetes mostra solidez, tradição,
+                qualidade, preços justos e acima de tudo: sabor, distribuindo
+                alegria e felicidade à mesa dos seus consumidores. O que começou
+                com uma pequena sorveteria, fundada em 1991 no centro da cidade
+                de Paraíso, uma cidade de 7 mil habitantes, localizada na região
+                Noroeste do estado de São Paulo, se tornou uma Indústria que
+                atua nos segmentos de Varejo (Produtos prontos para consumo),
+                disponibilizando freezers em sistema de comodato, Sorveterias
+                (fornecimento de grandes porções), e também nas grandes redes de
+                Supermercados (produtos para levar para casa).
               </p>
               <p>
-                Donec orci ante, placerat et interdum sed, mattis vitae felis.
-                Ut volutpat ultricies ligula. Nulla tortor magna, malesuada at
-                dignissim in, consequat sed lorem. Aliquam quis justo pulvinar
-                dolor pellentesque vestibulum dignissim nec nisi. Praesent
-                varius sit amet purus ac luctus. Pellentesque eu sapien tellus.
-                Nullam lobortis fermentum justo, vel pellentesque odio aliquet
-                eu. Curabitur sit amet mattis velit. Mauris non ultricies massa.
-                In eu ullamcorper neque. Pellentesque a tristique diam.
+                Com um sorvete de sabor irresistível, rapidamente a marca ganhou
+                a confiança e credibilidade dos consumidores, Hoje é uma das
+                principais marcas de sorvetes regionais, focada na Qualidade,
+                Inovação, Sustentabilidade e Responsabilidade em toda a cadeia
+                produtiva.
               </p>
             </div>
           </div>
