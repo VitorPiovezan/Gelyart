@@ -10,6 +10,7 @@ import Sobre from './pages/Sobre';
 import Categorias from './pages/Categorias';
 import Revendedor from './pages/Revendedor';
 import FaleConosco from './pages/FaleConosco';
+import Produtos from './pages/Produtos';
 
 export default function App() {
   const [mudaScreen, setMudaScreen] = useState(
@@ -44,6 +45,9 @@ export default function App() {
         </Route>
         <Route path="/fale-conosco">
           <FaleConosco mudaScreen={mudaScreen} />
+        </Route>
+        <Route path="/produtos">
+          <Produtos mudaScreen={mudaScreen} />
         </Route>
         <Redirect to={{ pathname: '/home' }} />
       </Switch>

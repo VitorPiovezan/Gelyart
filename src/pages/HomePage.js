@@ -3,6 +3,8 @@ import Footer from '../components/Footer';
 import RevendedorHome from '../components/Revendedor.Home';
 import { ContainerHome, Container } from '../styles/Styled.Home';
 import LinhaProdutosHome from '../components/LinhaProdutos.Home';
+import { HandleScroll } from '../configs/configs';
+import { Link } from 'react-router-dom';
 
 export default function HomePage({ mudaScreen }) {
   return (
@@ -42,25 +44,35 @@ export default function HomePage({ mudaScreen }) {
         </h1>
 
         <LinhaProdutosHome mudaScreen={mudaScreen} />
-
-        <button
+        <Link
           style={{
-            fontSize: '1.2rem',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            color: '#fff',
-            padding: '0.6rem',
-            width: `${mudaScreen ? '30%' : '70%'}`,
-            borderRadius: '50px',
-            backgroundColor: '#286198',
-            marginTop: '3rem',
-            boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
-            border: 'none',
-            cursor: 'pointer',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            textDecoration: 'none',
           }}
+          to={'/produtos'}
+          onClick={HandleScroll}
         >
-          Veja toda nossa linha
-        </button>
+          <button
+            style={{
+              fontSize: '1.2rem',
+              fontWeight: 'bold',
+              textAlign: 'center',
+              color: '#fff',
+              padding: '0.6rem',
+              width: `${mudaScreen ? '30%' : '70%'}`,
+              borderRadius: '50px',
+              backgroundColor: '#286198',
+              marginTop: '3rem',
+              boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
+              border: 'none',
+              cursor: 'pointer',
+            }}
+          >
+            Veja toda nossa linha
+          </button>
+        </Link>
       </ContainerHome>
 
       <RevendedorHome mudaScreen={mudaScreen} />

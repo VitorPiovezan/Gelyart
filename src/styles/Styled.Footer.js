@@ -6,7 +6,8 @@ export const FT = styled.div`
   align-items: ${props => props.items};
   justify-content: space-between;
   color: white;
-  padding: 30px 40px;
+  padding: 1px 40px;
+  margin-bottom: 20px;
   flex-direction: ${props => props.flex};
 `;
 
