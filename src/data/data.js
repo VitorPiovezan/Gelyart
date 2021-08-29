@@ -7,15 +7,20 @@ export const categorias = [
     produtos: [
       {
         id: 1,
-        name: 'Copo de Napolitano',
-        img: '/img/produtos/copo_napolitano'
+        name: 'Copão de Napolitano',
+        img: '/img/produtos/copao-napolitano.png',
       },
       {
         id: 2,
-        name: 'Copo de Baunilha',
-        img: '/img/produtos/copo_baunilha'
-      }
-    ]
+        name: 'Copão de Morango',
+        img: '/img/produtos/copao-morango.png',
+      },
+      {
+        id: 3,
+        name: 'Copão de Chocolate',
+        img: '/img/produtos/copao-chocoalte.png',
+      },
+    ],
   },
   {
     id: 2,
