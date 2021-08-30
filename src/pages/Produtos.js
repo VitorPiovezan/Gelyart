@@ -2,7 +2,17 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Container } from '../styles/Styled.Home';
+import { Link, useHistory } from 'react-router-dom';
 export default function Produtos({ mudaScreen }) {
+  const history = useHistory();
+
+  const handleClick = link => {
+      history.push(link);
+      window.scrollTo({
+        behavior: 'smooth',
+        top: 0,
+      });
+  };
   return (
     <Container>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -57,7 +67,7 @@ export default function Produtos({ mudaScreen }) {
         />
       </div>
 
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', cursor: 'pointer' }} onClick={() => handleClick(`/produtos/copos`)}>
         <img
           alt="background"
           src={

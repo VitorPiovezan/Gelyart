@@ -3,6 +3,7 @@ import { categorias } from '../data/data';
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import {CardProduct, ImgProduct} from '../styles/Styled.Categorias';
 
 export default function Categorias({ mudaScreen }) {
   let data = useParams();
@@ -43,7 +44,7 @@ export default function Categorias({ mudaScreen }) {
         colorMenu={'rgb(31, 31, 60, 0.4)'}
         mudaScreen={mudaScreen}
       />
-
+<div style={{display: 'flex', width: '100%', justifyContent: 'center', flexWrap: 'wrap'}}>
       <div
         style={{
           display: 'flex',
@@ -52,32 +53,24 @@ export default function Categorias({ mudaScreen }) {
           alignItems: 'center',
           width: `${mudaScreen ? '100%' : '90%'}`,
           maxWidth: '1000px',
+          color: '#2b6199',
+          fontWeight: 'bold'
         }}
       >
-        <h1 style={{ padding: '20px', color: '#2b6199' }}>
+        <h1 style={{ padding: '50px'}}>
           {arrayCategoria.name}
         </h1>
         <div
           style={{
             display: 'flex',
-            justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
+            flexWrap: 'wrap'
           }}
         >
           {produtosOnly
             ? arrayCategoria.produtos.map(item => (
-                <div
-                  style={{
-                    borderRadius: '5px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    marginLeft: '15px',
-                    minWidth: '200px',
-                    boxShadow: '3px 3px 4px 1px rgba(0, 0, 0, 0.2)',
-                  }}
-                >
+                <CardProduct acao={mudaScreen ? "30%" : "45%" }>
                   {' '}
                   <div
                     style={{
@@ -89,20 +82,17 @@ export default function Categorias({ mudaScreen }) {
                       alignItems: 'center',
                     }}
                   >
-                    <img
+                    <ImgProduct
                       alt={item.name}
-                      style={{
-                        width: '130px',
-                      }}
                       src={item.img}
                     />
                   </div>
                   <p>{item.name}</p>
-                </div>
+                </CardProduct>
               ))
             : ''}
         </div>
-      </div>
+      </div></div>
 
       <div style={{ height: '100rem' }}></div>
       <Footer mudaScreen={mudaScreen} />
