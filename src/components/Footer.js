@@ -12,7 +12,7 @@ export default function Footer({ mudaScreen }) {
         height: `${mudaScreen ? '200px' : '330px'}`,
         backgroundColor: '#2b6199',
         fontFamily: 'Segoe UI',
-      }}
+      }}//teste github
     >
       <FT
         items={`${mudaScreen ? 'center' : ''}`}
