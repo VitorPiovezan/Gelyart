@@ -7,15 +7,22 @@ export default function Produtos({ mudaScreen }) {
   const history = useHistory();
 
   const handleClick = link => {
-      history.push(link);
-      window.scrollTo({
-        behavior: 'smooth',
-        top: 0,
-      });
+    history.push(link);
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0,
+    });
   };
   return (
     <Container>
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          cursor: 'pointer',
+        }}
+      >
         <img
           alt="background"
           src={
@@ -37,7 +44,15 @@ export default function Produtos({ mudaScreen }) {
         mudaScreen={mudaScreen}
       />
 
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          cursor: 'pointer',
+        }}
+        onClick={() => handleClick(`/produtos/acai`)}
+      >
         <img
           alt="background"
           src={
@@ -52,7 +67,15 @@ export default function Produtos({ mudaScreen }) {
         />
       </div>
 
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          cursor: 'pointer',
+        }}
+        onClick={() => handleClick(`/produtos/classicos`)}
+      >
         <img
           alt="background"
           src={
@@ -67,7 +90,15 @@ export default function Produtos({ mudaScreen }) {
         />
       </div>
 
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', cursor: 'pointer' }} onClick={() => handleClick(`/produtos/copos`)}>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          cursor: 'pointer',
+        }}
+        onClick={() => handleClick(`/produtos/copos`)}
+      >
         <img
           alt="background"
           src={
@@ -82,7 +113,15 @@ export default function Produtos({ mudaScreen }) {
         />
       </div>
 
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          cursor: 'pointer',
+        }}
+        onClick={() => handleClick(`/produtos/duo`)}
+      >
         <img
           alt="background"
           src={
@@ -97,7 +136,15 @@ export default function Produtos({ mudaScreen }) {
         />
       </div>
 
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          cursor: 'pointer',
+        }}
+        onClick={() => handleClick(`/produtos/picole-de-frutas`)}
+      >
         <img
           alt="background"
           src={
