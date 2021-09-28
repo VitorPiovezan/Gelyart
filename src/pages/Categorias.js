@@ -3,7 +3,9 @@ import { categorias } from '../data/data';
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import {CardProduct, ImgProduct} from '../styles/Styled.Categorias';
+import { CardProduct, ImgProduct } from '../styles/Styled.Categorias';
+import LinhaProdutosHome from '../components/LinhaProdutos.Home';
+import { ContainerHome } from '../styles/Styled.Home';
 
 export default function Categorias({ mudaScreen }) {
   let data = useParams();
@@ -44,7 +46,14 @@ export default function Categorias({ mudaScreen }) {
         colorMenu={'rgb(31, 31, 60, 0.4)'}
         mudaScreen={mudaScreen}
       />
-<div style={{display: 'flex', width: '100%', justifyContent: 'center', flexWrap: 'wrap'}}>
+      <ContainerHome>
+        <LinhaProdutosHome
+          action={arrayCategoria.link}
+          mudaScreen={mudaScreen}
+        />
+      </ContainerHome>
+
+      {/* <div style={{display: 'flex', width: '100%', justifyContent: 'center', flexWrap: 'wrap'}}>
       <div
         style={{
           display: 'flex',
@@ -92,7 +101,7 @@ export default function Categorias({ mudaScreen }) {
               ))
             : ''}
         </div>
-      </div></div>
+      </div></div> */}
 
       <div style={{ height: '100rem' }}></div>
       <Footer mudaScreen={mudaScreen} />

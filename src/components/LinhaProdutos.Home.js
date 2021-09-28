@@ -1,17 +1,13 @@
 import { categorias } from '../data/data';
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import {
-  ImgSlider,
-  DivSlider,
-  ProdutosSlider,
-} from '../styles/Styled.Home';
+import { ImgSlider, DivSlider, ProdutosSlider } from '../styles/Styled.Home';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { SampleNextArrow, SamplePrevArrow } from '../configs/configs';
 
-export default function LinhaProdutosHome({mudaScreen}) {
+export default function LinhaProdutosHome({ mudaScreen, action }) {
   //configurações do slider
   var settings = {
     dots: true,
@@ -44,24 +40,26 @@ export default function LinhaProdutosHome({mudaScreen}) {
 
   return (
     <ProdutosSlider widthScreen={`${mudaScreen ? '90%' : '100%'}`}>
-          <Slider {...settings}>
-            {categorias.map(item => {
-              return (
-                <div key={item.id} style={{ width: '100%'}}>
-                  <div
-                    onMouseMove={() => setMouseMoved(true)}
-                    onMouseDown={() => setMouseMoved(false)}
-                    onMouseUp={() => handleClick(`/produtos/${item.link}`)}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    <DivSlider>
-                      <ImgSlider alt={item.name} src={item.banner} />
-                    </DivSlider>
-                  </div>
+      <Slider {...settings}>
+        {categorias.map(item => {
+          if (item.link !== action) {
+            return (
+              <div key={item.id} style={{ width: '100%' }}>
+                <div
+                  onMouseMove={() => setMouseMoved(true)}
+                  onMouseDown={() => setMouseMoved(false)}
+                  onMouseUp={() => handleClick(`/produtos/${item.link}`)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <DivSlider>
+                    <ImgSlider alt={item.name} src={item.banner} />
+                  </DivSlider>
                 </div>
-              );
-            })}
-          </Slider>
-        </ProdutosSlider>
-  )
+              </div>
+            );
+          }
+        })}
+      </Slider>
+    </ProdutosSlider>
+  );
 }
