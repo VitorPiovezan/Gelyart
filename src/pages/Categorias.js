@@ -3,7 +3,11 @@ import { categorias } from '../data/data';
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { CardProduct, ImgProduct } from '../styles/Styled.Categorias';
+import {
+  CardProduct,
+  ImgProduct,
+  ProdutosList,
+} from '../styles/Styled.Categorias';
 import LinhaProdutosHome from '../components/LinhaProdutos.Home';
 import { ContainerHome } from '../styles/Styled.Home';
 
@@ -11,6 +15,7 @@ export default function Categorias({ mudaScreen }) {
   let data = useParams();
   const [arrayCategoria, setArrayCategoria] = useState({});
   const [produtosOnly, setProdutosOnly] = useState(false);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     categorias.map(item => {
@@ -51,6 +56,94 @@ export default function Categorias({ mudaScreen }) {
           action={arrayCategoria.link}
           mudaScreen={mudaScreen}
         />
+        <div
+          style={{
+            marginTop: '20px',
+            width: '100%',
+            height: '60px',
+            backgroundColor: '#2b6199',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <h2 style={{ color: '#fff' }}>{arrayCategoria.name}</h2>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            width: '100%',
+            backgroundColor: '#fafafa',
+            marginBottom: '-30px',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              width: '100%',
+            }}
+          >
+            <img
+              alt={arrayCategoria.name}
+              src={arrayCategoria.img_product}
+              width="70%"
+              style={{ padding: '50px' }}
+            />
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              padding: '50px 0px',
+              width: '100%',
+            }}
+          >
+            <h3>{arrayCategoria.name}</h3>
+            <p>
+              <strong>Peso Total:</strong> {arrayCategoria.weigth}
+            </p>
+            <div
+              style={{
+                marginTop: '15px',
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: '#dfdfdf',
+                  padding: '0px 10px',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  cursor: 'pointer',
+                  transition: '0.5s',
+                }}
+                onClick={() => {
+                  setActive(!active);
+                }}
+              >
+                <p style={{ fontWeight: 'bold' }}>Sabores</p>
+                {active ? (
+                  <p style={{ transition: '0.5s' }}>-</p>
+                ) : (
+                  <p style={{ transition: '0.5s' }}>+</p>
+                )}
+              </div>
+              <ProdutosList
+                acao={active ? '' : '0%'}
+                overflow={active ? '' : 'hidden'}
+                padding={active ? '10px' : '0px 10px'}
+                color={active ? '#000' : 'rgb(0,0,0,0)'}
+              >
+                {arrayCategoria.produtos.map(item => (
+                  <div style={{ padding: '5px 0' }}>{item.name}</div>
+                ))}
+              </ProdutosList>
+            </div>
+          </div>
+        </div>
       </ContainerHome>
 
       {/* <div style={{display: 'flex', width: '100%', justifyContent: 'center', flexWrap: 'wrap'}}>
@@ -103,7 +196,6 @@ export default function Categorias({ mudaScreen }) {
         </div>
       </div></div> */}
 
-      <div style={{ height: '100rem' }}></div>
       <Footer mudaScreen={mudaScreen} />
     </>
   );

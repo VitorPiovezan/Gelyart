@@ -2,23 +2,22 @@ export const categorias = [
   {
     id: 1,
     link: 'copos',
-    name: 'Copos',
+    weigth: '140 gr',
+    name: 'Big Copão',
     banner: '/img/banners/copos_mini_banner.png',
+    img_product: '/img/produtos/copao-chocoalte.png',
     produtos: [
       {
         id: 1,
         name: 'Copão de Napolitano',
-        img: '/img/produtos/copao-napolitano.png',
       },
       {
         id: 2,
         name: 'Copão de Morango',
-        img: '/img/produtos/copao-morango.png',
       },
       {
         id: 3,
         name: 'Copão de Chocolate',
-        img: '/img/produtos/copao-chocoalte.png',
       },
     ],
   },

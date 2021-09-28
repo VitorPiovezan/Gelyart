@@ -20,6 +20,15 @@ export const CardProduct = styled.div`
 
 export const ImgProduct = styled.img`
   width: 170px;
-   transition: .5s;
-   object-fit: 'cover'
-`
+  transition: 0.5s;
+  object-fit: 'cover';
+`;
+
+export const ProdutosList = styled.div`
+  background-color: #dfdfdf;
+  padding: ${props => props.padding};
+  transition: 0.2s;
+  height: ${props => props.acao};
+  overflow: ${props => props.overflow};
+  color: ${props => props.color};
+`;
