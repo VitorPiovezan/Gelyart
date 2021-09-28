@@ -64,7 +64,7 @@ export const categorias = [
   {
     id: 4,
     link: 'picole-de-frutas',
-    weigth: '70 gr',
+    weigth: '65 gr',
     name: 'Picolé de Frutas',
     banner: '/img/banners/picole_frutas_mini_banner.png',
     img_product: '/img/produtos/picole-frutas.png',
@@ -84,7 +84,7 @@ export const categorias = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     link: 'duo',
     weigth: '1,5 Litros',
     name: 'Duo',
@@ -94,6 +94,100 @@ export const categorias = [
       {
         id: 1,
         name: 'Doce de Leite e Creme',
+      },
+    ],
+  },
+  {
+    id: 6,
+    link: 'moreninha',
+    weigth: '85 gr',
+    name: 'Moreninha',
+    banner: '/img/banners/moreninha_mini_banner.png',
+    img_product: '/img/produtos/moreninha.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Moreninha',
+      },
+    ],
+  },
+  {
+    id: 7,
+    link: 'yogurtin',
+    weigth: '80 gr',
+    name: 'Yogurtin',
+    banner: '/img/banners/yogurtin_mini_banner.png',
+    img_product: '/img/produtos/yogurtin.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Blue Ice',
+      },
+      {
+        id: 2,
+        name: 'Groselha',
+      },
+      {
+        id: 3,
+        name: 'Leite Condensado',
+      },
+      {
+        id: 4,
+        name: 'Morango',
+      },
+    ],
+  },
+  {
+    id: 8,
+    link: 'sundae',
+    weigth: '150 gr',
+    name: 'Sundae',
+    banner: '/img/banners/sundae_mini_banner.png',
+    img_product: '/img/produtos/sundae.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Chocolate',
+      },
+    ],
+  },
+  {
+    id: 9,
+    link: 'picole-leite',
+    weigth: '65 gr',
+    name: 'Picolé ao Leite',
+    banner: '/img/banners/picole_leite_mini_banner.png',
+    img_product: '/img/produtos/picole-leite.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Chocolate',
+      },
+      {
+        id: 2,
+        name: 'Coco',
+      },
+      {
+        id: 3,
+        name: 'Morango',
+      },
+    ],
+  },
+  {
+    id: 10,
+    link: 'trufado',
+    weigth: '1,5 Litros',
+    name: 'Trufado',
+    banner: '/img/banners/trufado_mini_banner.png',
+    img_product: '/img/produtos/trufado.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Mousse de Maracujá',
+      },
+      {
+        id: 2,
+        name: 'Yogurte Grego',
       },
     ],
   },

@@ -32,7 +32,7 @@ export default function Header({
   return (
     <>
       <Head
-        acaoHeight={mudaHeader ? '4rem' : '6rem'}
+        acaoHeight={mudaHeader ? '5rem' : '6rem'}
         acao={mudaHeader ? colorheaderPos : colorheader}
       >
         <div
@@ -58,7 +58,7 @@ export default function Header({
               alt="logotipo"
               src="/img/logotipo.png"
               style={{
-                maxWidth: `${mudaHeader ? '4rem' : '6rem'}`,
+                maxWidth: `${mudaHeader ? '5rem' : '6rem'}`,
                 transition: '0.2s',
               }}
             />
