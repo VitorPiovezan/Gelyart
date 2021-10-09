@@ -58,7 +58,7 @@ export default function Header({
               alt="logotipo"
               src="/img/logotipo.png"
               style={{
-                maxWidth: `${mudaHeader ? '5rem' : '6rem'}`,
+                maxWidth: `${mudaHeader ? '6rem' : '7rem'}`,
                 transition: '0.2s',
               }}
             />
