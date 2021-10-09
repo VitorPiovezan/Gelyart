@@ -66,6 +66,13 @@ export function MenuDeviceComponent({ mudaHeader, colorMenu }) {
         <MenuItem component={Link} to={'/produtos'} onClick={handleScroll}>
           Produtos
         </MenuItem>
+        <MenuItem
+          component={Link}
+          to={'/seja-um-revendedor'}
+          onClick={handleScroll}
+        >
+          Seja um Parceiro
+        </MenuItem>
         <MenuItem component={Link} to={'/fale-conosco'} onClick={handleScroll}>
           Fale Conosco
         </MenuItem>

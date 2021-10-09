@@ -104,6 +104,19 @@ export default function Header({
                     fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`,
                     transition: '0.2s',
                   }}
+                  to={'/seja-um-revendedor'}
+                  onClick={HandleScroll}
+                >
+                  Seja um Parceiro
+                </Link>
+                <Link
+                  style={{
+                    color: 'white',
+                    textDecoration: 'none',
+                    padding: '10px',
+                    fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`,
+                    transition: '0.2s',
+                  }}
                   to={'/produtos'}
                   onClick={HandleScroll}
                 >

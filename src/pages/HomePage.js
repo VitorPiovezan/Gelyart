@@ -29,7 +29,7 @@ export default function HomePage({ mudaScreen }) {
           <img
             src="/img/logotipo.png"
             alt="logo"
-            width="200px"
+            width="300px"
             style={{ marginTop: '-150px' }}
           />
           <img
