@@ -192,3 +192,26 @@ export const categorias = [
     ],
   },
 ];
+
+export const sobre = [
+  {
+    id: 1,
+    banner: '/img/banners/sobre1.jpeg',
+  },
+  {
+    id: 2,
+    banner: '/img/banners/sobre2.jpeg',
+  },
+  {
+    id: 3,
+    banner: '/img/banners/sobre3.jpeg',
+  },
+  {
+    id: 4,
+    banner: '/img/banners/sobre4.jpeg',
+  },
+  {
+    id: 5,
+    banner: '/img/banners/sobre5.jpeg',
+  },
+];

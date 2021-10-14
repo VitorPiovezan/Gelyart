@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Container } from '../styles/Styled.Home';
+import SliderGeral from '../components/Slider';
 export default function Sobre({ mudaScreen }) {
   return (
     <Container>
@@ -107,6 +108,10 @@ export default function Sobre({ mudaScreen }) {
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        <SliderGeral />
       </div>
 
       <Footer mudaScreen={mudaScreen} />

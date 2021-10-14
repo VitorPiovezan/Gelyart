@@ -21,6 +21,14 @@ export const ImgSlider = styled.img`
   box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
 `;
 
+export const ImgSliderGeral = styled.img`
+  width: 100%;
+  max-width: 750px;
+  max-height: 500px;
+  margin-left: 75px;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+`;
+
 export const DivSlider = styled.div`
   width: 90%;
   padding: 20px 15px;
@@ -28,8 +36,23 @@ export const DivSlider = styled.div`
   justify-content: center;
 `;
 
+export const DivSliderGeral = styled.div`
+  width: 90%;
+  height: 100%;
+  padding: 20px 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+`;
+
 export const ProdutosSlider = styled.div`
   width: ${props => props.widthScreen};
   height: 100%;
+  z-index: 1;
+`;
+
+export const ProdutosSliderGeral = styled.div`
+  width: ${props => props.widthScreen};
+  margin: auto;
   z-index: 1;
 `;
