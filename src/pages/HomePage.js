@@ -6,6 +6,7 @@ import LinhaProdutosHome from '../components/LinhaProdutos.Home';
 import { HandleScroll } from '../configs/configs';
 import { Link } from 'react-router-dom';
 import '../index.css';
+import AOS from 'aos';
 import { useState, useEffect } from 'react';
 
 export default function HomePage({ mudaScreen }) {
@@ -13,6 +14,12 @@ export default function HomePage({ mudaScreen }) {
   setTimeout(() => {
     setLoading(false);
   }, 2000);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+    });
+  }, []);
 
   return (
     <>
@@ -67,6 +74,7 @@ export default function HomePage({ mudaScreen }) {
 
           <ContainerHome>
             <h1
+              data-aos="fade-left"
               id="produtos"
               style={{
                 color: '#286198',
@@ -77,7 +85,11 @@ export default function HomePage({ mudaScreen }) {
               CONHEÇA NOSSA LINHA DE PRODUTOS
             </h1>
 
-            <LinhaProdutosHome mudaScreen={mudaScreen} />
+            <LinhaProdutosHome
+              minView={1}
+              maxView={3}
+              mudaScreen={mudaScreen}
+            />
             <Link
               style={{
                 width: '100%',

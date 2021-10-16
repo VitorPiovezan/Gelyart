@@ -25,7 +25,6 @@ export const ImgSliderGeral = styled.img`
   width: 100%;
   max-width: 750px;
   max-height: 500px;
-  margin-left: 75px;
   box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
 `;
 
@@ -39,7 +38,6 @@ export const DivSlider = styled.div`
 export const DivSliderGeral = styled.div`
   width: 90%;
   height: 100%;
-  padding: 20px 15px;
   display: flex;
   justify-content: center;
   margin-bottom: 40px;

@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Container } from '../styles/Styled.Home';
 import { Link, useHistory } from 'react-router-dom';
+import AOS from 'aos';
 export default function Produtos({ mudaScreen }) {
   const history = useHistory();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
   const handleClick = link => {
     history.push(link);
@@ -45,6 +52,7 @@ export default function Produtos({ mudaScreen }) {
       />
 
       <div
+        data-aos="fade-left"
         style={{
           width: '100%',
           display: 'flex',
@@ -68,6 +76,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
+        data-aos="fade-right"
         style={{
           width: '100%',
           display: 'flex',
@@ -91,6 +100,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
+        data-aos="fade-left"
         style={{
           width: '100%',
           display: 'flex',
@@ -114,6 +124,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
+        data-aos="fade-right"
         style={{
           width: '100%',
           display: 'flex',
@@ -137,6 +148,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
+        data-aos="fade-left"
         style={{
           width: '100%',
           display: 'flex',

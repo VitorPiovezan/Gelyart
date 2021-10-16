@@ -2,7 +2,7 @@ export const categorias = [
   {
     id: 1,
     link: 'copos',
-    weigth: '140 gr',
+    weigth: '140g',
     name: 'Big Copão',
     banner: '/img/banners/copos_mini_banner.png',
     img_product: '/img/produtos/copao-chocoalte.png',
@@ -64,7 +64,7 @@ export const categorias = [
   {
     id: 4,
     link: 'picole-de-frutas',
-    weigth: '65 gr',
+    weigth: '65g',
     name: 'Picolé de Frutas',
     banner: '/img/banners/picole_frutas_mini_banner.png',
     img_product: '/img/produtos/picole-frutas.png',
@@ -114,7 +114,7 @@ export const categorias = [
   {
     id: 7,
     link: 'yogurtin',
-    weigth: '80 gr',
+    weigth: '80g',
     name: 'Yogurtin',
     banner: '/img/banners/yogurtin_mini_banner.png',
     img_product: '/img/produtos/yogurtin.png',
@@ -154,7 +154,7 @@ export const categorias = [
   {
     id: 9,
     link: 'picole-leite',
-    weigth: '65 gr',
+    weigth: '65g',
     name: 'Picolé ao Leite',
     banner: '/img/banners/picole_leite_mini_banner.png',
     img_product: '/img/produtos/picole-leite.png',
@@ -188,6 +188,92 @@ export const categorias = [
       {
         id: 2,
         name: 'Yogurte Grego',
+      },
+    ],
+  },
+  {
+    id: 11,
+    link: 'cones',
+    weigth: '62g',
+    name: 'Cones',
+    banner: '/img/banners/cones_mini_banner.png',
+    img_product: '/img/produtos/cone.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Brigadeiro',
+      },
+      {
+        id: 2,
+        name: 'Carioca',
+      },
+    ],
+  },
+  {
+    id: 12,
+    link: 'ituzinho',
+    weigth: '62g',
+    name: 'Ituzinho',
+    banner: '/img/banners/ituzinho_mini_banner.png',
+    img_product: '/img/produtos/ituzinho.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Chocolate',
+      },
+      {
+        id: 2,
+        name: 'Morango',
+      },
+      {
+        id: 3,
+        name: 'Baunilha',
+      },
+    ],
+  },
+  {
+    id: 13,
+    link: 'bombom-gelado',
+    weigth: '100g',
+    name: 'Bombom Gelado',
+    banner: '/img/banners/bombom_gelado_mini_banner.png',
+    img_product: '/img/produtos/bombom.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Chantilly com cobertura de Chocolate',
+      },
+    ],
+  },
+  {
+    id: 14,
+    link: 'bolo-sorvete',
+    weigth: '1 Litro',
+    name: 'Bolo de Sorvete',
+    banner: '/img/banners/bolo_sorvete_mini_banner.png',
+    img_product: '/img/produtos/bolo-sorvete.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Leitinho com recheio de Brigadeiro',
+      },
+    ],
+  },
+  {
+    id: 15,
+    link: 'kid',
+    weigth: '65g',
+    name: 'Kids',
+    banner: '/img/banners/kids_mini_banner.png',
+    img_product: '/img/produtos/kids.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Mini saia',
+      },
+      {
+        id: 2,
+        name: 'Pinta lingua',
       },
     ],
   },

@@ -7,14 +7,19 @@ import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { SampleNextArrow, SamplePrevArrow } from '../configs/configs';
 
-export default function LinhaProdutosHome({ mudaScreen, action }) {
+export default function LinhaProdutosHome({
+  maxView,
+  minView,
+  mudaScreen,
+  action,
+}) {
   //configurações do slider
   var settings = {
     dots: true,
     infinite: true,
     speed: 700,
-    slidesToShow: mudaScreen ? 3 : 1,
-    slidesToScroll: mudaScreen ? 3 : 1,
+    slidesToShow: mudaScreen ? maxView : minView,
+    slidesToScroll: mudaScreen ? maxView : minView,
     initialSlide: 0,
     autoplay: true,
     nextArrow: <SampleNextArrow />,
@@ -39,7 +44,10 @@ export default function LinhaProdutosHome({ mudaScreen, action }) {
   };
 
   return (
-    <ProdutosSlider widthScreen={`${mudaScreen ? '90%' : '100%'}`}>
+    <ProdutosSlider
+      data-aos="zoom-out"
+      widthScreen={`${mudaScreen ? '90%' : '100%'}`}
+    >
       <Slider {...settings}>
         {categorias.map(item => {
           if (item.link !== action) {

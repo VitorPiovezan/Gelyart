@@ -20,12 +20,10 @@ export default function SliderGeral({ mudaScreen, action }) {
     dots: false,
     infinite: true,
     speed: 700,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: mudaScreen ? 2 : 1,
+    slidesToScroll: mudaScreen ? 2 : 1,
     initialSlide: 0,
     autoplay: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
     focusOnSelect: true,
     centerMode: true,
     // swipe: mudaScreen ? false : true,
@@ -56,7 +54,13 @@ export default function SliderGeral({ mudaScreen, action }) {
                 onMouseDown={() => setMouseMoved(false)}
               >
                 <DivSliderGeral>
-                  <ImgSliderGeral alt={item.banner} src={item.banner} />
+                  <ImgSliderGeral
+                    style={{
+                      marginLeft: `${mudaScreen ? '60px' : '55px'}`,
+                    }}
+                    alt={item.banner}
+                    src={item.banner}
+                  />
                 </DivSliderGeral>
               </div>
             </div>

@@ -3,7 +3,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Container } from '../styles/Styled.Home';
 import SliderGeral from '../components/Slider';
+import AOS from 'aos';
+import { useEffect } from 'react';
 export default function Sobre({ mudaScreen }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+    });
+  }, []);
   return (
     <Container>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -28,7 +35,12 @@ export default function Sobre({ mudaScreen }) {
         mudaScreen={mudaScreen}
       />
 
+      <div data-aos="fade-left" style={{ paddingTop: '50px' }}>
+        <SliderGeral mudaScreen={mudaScreen} />
+      </div>
+
       <div
+        data-aos="fade-right"
         style={{
           padding: '50px 0px',
           display: 'flex',
@@ -108,10 +120,6 @@ export default function Sobre({ mudaScreen }) {
             </div>
           </div>
         </div>
-      </div>
-
-      <div>
-        <SliderGeral />
       </div>
 
       <Footer mudaScreen={mudaScreen} />

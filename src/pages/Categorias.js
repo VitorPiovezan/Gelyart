@@ -182,6 +182,8 @@ export default function Categorias({ mudaScreen }) {
               </div>
               <LinhaProdutosHome
                 action={arrayCategoria.link}
+                maxView={5}
+                minView={2}
                 mudaScreen={mudaScreen}
               />
             </ContainerHome>
