@@ -77,6 +77,7 @@ export default function RevendedorHome({ mudaScreen }) {
                   boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
                   border: 'none',
                   cursor: 'pointer',
+                  marginLeft: `${mudaScreen ? '' : '-10px'}`,
                 }}
               >
                 Confira Já!

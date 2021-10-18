@@ -15,7 +15,7 @@ export default function LinhaProdutosHome({
 }) {
   //configurações do slider
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 700,
     slidesToShow: mudaScreen ? maxView : minView,

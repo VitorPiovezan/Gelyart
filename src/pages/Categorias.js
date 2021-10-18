@@ -34,7 +34,7 @@ export default function Categorias({ mudaScreen }) {
 
   setTimeout(() => {
     setLoading(false);
-  }, 2000);
+  }, 500);
 
   return (
     <>

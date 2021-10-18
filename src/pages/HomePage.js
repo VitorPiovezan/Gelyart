@@ -13,7 +13,7 @@ export default function HomePage({ mudaScreen }) {
   const [loading, setLoading] = useState(true);
   setTimeout(() => {
     setLoading(false);
-  }, 2000);
+  }, 1000);
 
   useEffect(() => {
     AOS.init({
@@ -122,7 +122,6 @@ export default function HomePage({ mudaScreen }) {
           </ContainerHome>
 
           <RevendedorHome mudaScreen={mudaScreen} />
-
           {mudaScreen ? (
             ''
           ) : (

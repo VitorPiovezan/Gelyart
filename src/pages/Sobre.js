@@ -35,7 +35,7 @@ export default function Sobre({ mudaScreen }) {
         mudaScreen={mudaScreen}
       />
 
-      <div data-aos="fade-left" style={{ paddingTop: '50px' }}>
+      <div data-aos="fade-left" style={{ paddingTop: '80px' }}>
         <SliderGeral mudaScreen={mudaScreen} />
       </div>
 

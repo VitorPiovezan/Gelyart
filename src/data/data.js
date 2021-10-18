@@ -175,9 +175,9 @@ export const categorias = [
   },
   {
     id: 10,
-    link: 'trufado',
+    link: 'trufados',
     weigth: '1,5 Litros',
-    name: 'Trufado',
+    name: 'Trufados',
     banner: '/img/banners/trufado_mini_banner.png',
     img_product: '/img/produtos/trufado.png',
     produtos: [
@@ -261,7 +261,7 @@ export const categorias = [
   },
   {
     id: 15,
-    link: 'kid',
+    link: 'kids',
     weigth: '65g',
     name: 'Kids',
     banner: '/img/banners/kids_mini_banner.png',
