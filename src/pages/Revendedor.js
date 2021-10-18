@@ -58,8 +58,8 @@ export default function Revendedor({ mudaScreen }) {
           alt="background"
           src={
             mudaScreen
-              ? '/img/banners/revendedor_banner.png'
-              : '/img/banners/revendedor_banner_mobile.png'
+              ? '/img/banners/revendedor_banner_new.png'
+              : '/img/banners/revendedor_banner_mobile_new.png'
           }
           style={{
             width: '100%',

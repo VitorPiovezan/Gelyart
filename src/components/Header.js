@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Header as Head, NavLink } from '../styles/Styled.Header';
+import { Header as Head, NavLink, LinkHeader } from '../styles/Styled.Header';
 import { Link } from 'react-router-dom';
 import { MenuDeviceComponent } from './MenuDevice';
 import { HandleScroll } from '../configs/configs';
@@ -70,58 +70,34 @@ export default function Header({
           >
             {mudaScreen ? (
               <div style={{ color: 'white' }}>
-                <Link
-                  style={{
-                    color: 'white',
-                    textDecoration: 'none',
-                    padding: '10px',
-                    fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`,
-                    transition: '0.2s',
-                  }}
+                <LinkHeader
+                  mudaHeader={mudaHeader ? '1rem' : '1.2rem'}
                   to={'/'}
                   onClick={HandleScroll}
                 >
                   Home
-                </Link>
-                <Link
-                  style={{
-                    color: 'white',
-                    textDecoration: 'none',
-                    padding: '10px',
-                    fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`,
-                    transition: '0.2s',
-                  }}
+                </LinkHeader>
+                <LinkHeader
+                  mudaHeader={mudaHeader ? '1rem' : '1.2rem'}
                   to={'/sobre'}
                   onClick={HandleScroll}
                 >
                   Sobre
-                </Link>
-                <Link
-                  style={{
-                    color: 'white',
-                    textDecoration: 'none',
-                    padding: '10px',
-                    fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`,
-                    transition: '0.2s',
-                  }}
+                </LinkHeader>
+                <LinkHeader
+                  mudaHeader={mudaHeader ? '1rem' : '1.2rem'}
                   to={'/seja-um-revendedor'}
                   onClick={HandleScroll}
                 >
                   Seja um Parceiro
-                </Link>
-                <Link
-                  style={{
-                    color: 'white',
-                    textDecoration: 'none',
-                    padding: '10px',
-                    fontSize: `${mudaHeader ? '1rem' : '1.2rem'}`,
-                    transition: '0.2s',
-                  }}
+                </LinkHeader>
+                <LinkHeader
+                  mudaHeader={mudaHeader ? '1rem' : '1.2rem'}
                   to={'/produtos'}
                   onClick={HandleScroll}
                 >
                   Produtos
-                </Link>
+                </LinkHeader>
               </div>
             ) : (
               <MenuDeviceComponent

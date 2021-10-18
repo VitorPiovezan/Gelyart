@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 export default function Sobre({ mudaScreen }) {
   useEffect(() => {
     AOS.init({
-      duration: 900,
+      duration: 3000,
     });
   }, []);
   return (
@@ -35,10 +35,204 @@ export default function Sobre({ mudaScreen }) {
         mudaScreen={mudaScreen}
       />
 
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+      >
+        <div
+          data-aos="fade-left"
+          className="left"
+          style={{
+            display: 'flex',
+            maxWidth: '1080px',
+            width: '100%',
+            flexDirection: `${mudaScreen ? '' : 'column'}`,
+            alignItems: 'center',
+            padding: '30px 0',
+            textAlign: 'center',
+          }}
+        >
+          <div style={{ width: `${mudaScreen ? '40%' : '60%'}` }}>
+            <img
+              src="img/banners/sobre_banner_test_1.png"
+              alt="sobre"
+              style={{ width: '100%' }}
+            />
+          </div>
+          <div
+            style={{
+              padding: '30px',
+              minWidth: `${mudaScreen ? '450px' : ''}`,
+              width: `${mudaScreen ? '60%' : '80%'}`,
+            }}
+          >
+            <h2 style={{ color: '#2b6199' }}>Nossa História</h2>
+            <p
+              style={{
+                textAlign: 'justify',
+                padding: `${mudaScreen ? '40px 60px' : '40px 0'}`,
+              }}
+            >
+              Há mais de 30 anos a Gelyart Sorvetes mostra solidez, tradição,
+              qualidade, preços justos e acima de tudo: sabor, distribuindo
+              alegria e felicidade à mesa dos seus consumidores. O que começou
+              com uma pequena sorveteria, fundada em 1991 no centro da cidade de
+              Paraíso, uma cidade de 7 mil habitantes, localizada na região
+              Noroeste do estado de São Paulo.
+            </p>
+          </div>
+        </div>
+
+        {mudaScreen ? (
+          <div
+            className="right"
+            data-aos="fade-right"
+            style={{
+              display: 'flex',
+              maxWidth: '1080px',
+              width: '100%',
+              flexDirection: `${mudaScreen ? '' : 'column'}`,
+              alignItems: 'center',
+              padding: '30px 0',
+              textAlign: 'center',
+            }}
+          >
+            <div
+              style={{
+                padding: '30px',
+                minWidth: `${mudaScreen ? '450px' : ''}`,
+                width: `${mudaScreen ? '60%' : '80%'}`,
+              }}
+            >
+              <h2 style={{ color: '#2b6199' }}>O que nos tornamos</h2>
+              <p
+                style={{
+                  textAlign: 'justify',
+                  padding: `${mudaScreen ? '40px 60px' : '40px 0'}`,
+                }}
+              >
+                Se tornou uma Indústria que atua nos segmentos de Varejo
+                (Produtos prontos para consumo), disponibilizando freezers em
+                sistema de comodato, Sorveterias (fornecimento de grandes
+                porções), e também nas grandes redes de Supermercados (produtos
+                para levar para casa).
+              </p>
+            </div>
+
+            <div style={{ width: `${mudaScreen ? '40%' : '60%'}` }}>
+              <img
+                src="img/banners/sobre_banner_test_2.png"
+                alt="sobre"
+                style={{ width: '100%' }}
+              />
+            </div>
+          </div>
+        ) : (
+          <div
+            className="right"
+            data-aos="fade-right"
+            style={{
+              display: 'flex',
+              maxWidth: '1080px',
+              width: '100%',
+              flexDirection: `${mudaScreen ? '' : 'column'}`,
+              alignItems: 'center',
+              padding: '30px 0',
+              textAlign: 'center',
+            }}
+          >
+            <div style={{ width: `${mudaScreen ? '40%' : '60%'}` }}>
+              <img
+                src="img/banners/sobre_banner_test_2.png"
+                alt="sobre"
+                style={{ width: '100%' }}
+              />
+            </div>
+            <div
+              style={{
+                padding: '30px',
+                minWidth: `${mudaScreen ? '450px' : ''}`,
+                width: `${mudaScreen ? '60%' : '80%'}`,
+              }}
+            >
+              <h2 style={{ color: '#2b6199' }}>O Que nos Tornamos</h2>
+              <p
+                style={{
+                  textAlign: 'justify',
+                  padding: `${mudaScreen ? '40px 60px' : '40px 0'}`,
+                }}
+              >
+                Se tornou uma Indústria que atua nos segmentos de Varejo
+                (Produtos prontos para consumo), disponibilizando freezers em
+                sistema de comodato, Sorveterias (fornecimento de grandes
+                porções), e também nas grandes redes de Supermercados (produtos
+                para levar para casa).
+              </p>
+            </div>
+          </div>
+        )}
+
+        <div
+          className="left"
+          data-aos="fade-left"
+          style={{
+            display: 'flex',
+            maxWidth: '1080px',
+            width: '100%',
+            flexDirection: `${mudaScreen ? '' : 'column'}`,
+            alignItems: 'center',
+            padding: '30px 0',
+            textAlign: 'center',
+          }}
+        >
+          <div style={{ width: `${mudaScreen ? '40%' : '60%'}` }}>
+            <img
+              src="img/banners/sobre_banner_test_3.png"
+              alt="sobre"
+              style={{ width: '100%' }}
+            />
+          </div>
+          <div
+            style={{
+              padding: '30px',
+              minWidth: `${mudaScreen ? '450px' : ''}`,
+              width: `${mudaScreen ? '60%' : '80%'}`,
+            }}
+          >
+            <h2 style={{ color: '#2b6199' }}>Mais Sabor e Qualidade</h2>
+            <p
+              style={{
+                textAlign: 'justify',
+                padding: `${mudaScreen ? '40px 60px' : '40px 0'}`,
+              }}
+            >
+              Com um sorvete de sabor irresistível, rapidamente a marca ganhou a
+              confiança e credibilidade dos consumidores, Hoje é uma das
+              principais marcas de sorvetes regionais, focada na Qualidade,
+              Inovação, Sustentabilidade e Responsabilidade em toda a cadeia
+              produtiva.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div data-aos="fade-left" style={{ paddingTop: '80px' }}>
         <SliderGeral mudaScreen={mudaScreen} />
       </div>
 
+      {/* <div data-aos="fade-left" style={{ paddingTop: '80px' }}>
+        <SliderGeral mudaScreen={mudaScreen} />
+      </div>
+
+se tornou uma Indústria que atua
+              nos segmentos de Varejo (Produtos prontos para consumo),
+              disponibilizando freezers em sistema de comodato, Sorveterias
+              (fornecimento de grandes porções), e também nas grandes redes de
+              Supermercados (produtos para levar para casa).
+              
       <div
         data-aos="fade-right"
         style={{
@@ -120,7 +314,7 @@ export default function Sobre({ mudaScreen }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Footer mudaScreen={mudaScreen} />
     </Container>

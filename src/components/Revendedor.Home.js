@@ -21,11 +21,11 @@ export default function RevendedorHome({ mudaScreen }) {
         <img
           data-aos="zoom-out-right"
           alt="frezer"
-          src="/img/produtos/freezer-horizontal-gellyart-min.png"
+          src="/img/produtos/freezer-horizontal-vertical-gellyart-min.png"
           style={{
             maxWidth: `${mudaScreen ? '40%' : '70%'}`,
             marginLeft: `${mudaScreen ? '15%' : '15%'}`,
-            marginBottom: `${mudaScreen ? '-23rem' : '-14rem'}`,
+            marginBottom: `${mudaScreen ? '-20rem' : '-14rem'}`,
           }}
         />
       </div>
