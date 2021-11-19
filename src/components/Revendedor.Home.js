@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 export default function RevendedorHome({ mudaScreen }) {
   useEffect(() => {
     AOS.init({
-      duration: 900,
+      duration: 3000,
     });
   }, []);
 

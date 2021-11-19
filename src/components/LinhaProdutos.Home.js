@@ -44,10 +44,7 @@ export default function LinhaProdutosHome({
   };
 
   return (
-    <ProdutosSlider
-      data-aos="zoom-out"
-      widthScreen={`${mudaScreen ? '90%' : '100%'}`}
-    >
+    <ProdutosSlider widthScreen={`${mudaScreen ? '90%' : '100%'}`}>
       <Slider {...settings}>
         {categorias.map(item => {
           if (item.link !== action) {

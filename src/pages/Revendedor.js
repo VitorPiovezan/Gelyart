@@ -10,6 +10,7 @@ import {
   LabelShort,
   InputShort,
 } from '../styles/Styled.Revendedor';
+import AOS from 'aos';
 export default function Revendedor({ mudaScreen }) {
   const [linkWhats, setLinkWhats] = useState('');
   const [name, setName] = useState('');
@@ -17,6 +18,12 @@ export default function Revendedor({ mudaScreen }) {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
   const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    AOS.init({
+      duration: 3000,
+    });
+  }, []);
 
   useEffect(() => {
     setLinkWhats(
@@ -76,6 +83,7 @@ export default function Revendedor({ mudaScreen }) {
       />
 
       <div
+        data-aos="fade-down"
         className="content-revend"
         style={{
           display: 'flex',
@@ -184,7 +192,7 @@ export default function Revendedor({ mudaScreen }) {
                 cursor: 'pointer',
               }}
             >
-              WhatsApp
+              Enviar
             </button>
           </Link>
 

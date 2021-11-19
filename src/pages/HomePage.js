@@ -17,7 +17,7 @@ export default function HomePage({ mudaScreen }) {
 
   useEffect(() => {
     AOS.init({
-      duration: 900,
+      duration: 3000,
     });
   }, []);
 

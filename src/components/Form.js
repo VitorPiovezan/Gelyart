@@ -19,7 +19,7 @@ export default function Revendedor({ mudaScreen }) {
 
   useEffect(() => {
     AOS.init({
-      duration: 900,
+      duration: 3000,
     });
   }, []);
 
@@ -171,7 +171,7 @@ export default function Revendedor({ mudaScreen }) {
               cursor: 'pointer',
             }}
           >
-            WhatsApp
+            Enviar
           </button>
         </Link>
 

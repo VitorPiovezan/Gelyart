@@ -3,7 +3,7 @@ export const categorias = [
     id: 1,
     link: 'copos',
     weigth: '140g',
-    name: 'Big Copão',
+    name: 'Big Copão e Copinho',
     banner: '/img/banners/copos_mini_banner.png',
     img_product: '/img/produtos/copao-chocoalte.png',
     produtos: [
@@ -18,6 +18,18 @@ export const categorias = [
       {
         id: 3,
         name: 'Copão de Chocolate',
+      },
+      {
+        id: 4,
+        name: 'Copinho de Napolitano',
+      },
+      {
+        id: 5,
+        name: 'Copinho de Morango',
+      },
+      {
+        id: 6,
+        name: 'Copinho de Chocolate',
       },
     ],
   },
@@ -194,18 +206,18 @@ export const categorias = [
   {
     id: 11,
     link: 'cones',
-    weigth: '62g',
+    weigth: '80g',
     name: 'Cones',
     banner: '/img/banners/cones_mini_banner.png',
     img_product: '/img/produtos/cone.png',
     produtos: [
       {
         id: 1,
-        name: 'Brigadeiro',
+        name: 'Brigadeiro com Recheio',
       },
       {
         id: 2,
-        name: 'Carioca',
+        name: 'Carioca Chocolate e Creme Branco',
       },
     ],
   },
@@ -276,6 +288,15 @@ export const categorias = [
         name: 'Pinta lingua',
       },
     ],
+  },
+  {
+    id: 16,
+    link: 'caixas',
+    weigth: '5 e 10 Litros',
+    name: 'Caixas',
+    banner: '/img/banners/caixas_mini_banner.png',
+    img_product: '/img/produtos/caixas.png',
+    produtos: [],
   },
 ];
 
