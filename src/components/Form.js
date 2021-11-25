@@ -42,7 +42,7 @@ export default function Revendedor({ mudaScreen }) {
 
   function verifica() {
     if (name === '') {
-      alert('Insira um Nome');
+      alert('Insira seu Nome');
     } else if (cidade === '') {
       alert('Insira uma cidade');
     } else if (estado === '') {
