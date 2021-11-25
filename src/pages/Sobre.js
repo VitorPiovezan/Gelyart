@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Container } from '../styles/Styled.Home';
-import SliderGeral from '../components/Slider';
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+import { Container } from '../styles/Styled.Home.js';
+import SliderGeral from '../components/Slider.js';
 import AOS from 'aos';
 import { useEffect } from 'react';
 export default function Sobre({ mudaScreen }) {
@@ -43,7 +43,7 @@ export default function Sobre({ mudaScreen }) {
         }}
       >
         <div
-          data-aos="fade-left"
+          data-aos="fade-down"
           className="left"
           style={{
             display: 'flex',
@@ -89,7 +89,7 @@ export default function Sobre({ mudaScreen }) {
         {mudaScreen ? (
           <div
             className="right"
-            data-aos="fade-right"
+            data-aos="fade-down"
             style={{
               display: 'flex',
               maxWidth: '1080px',
@@ -133,7 +133,7 @@ export default function Sobre({ mudaScreen }) {
         ) : (
           <div
             className="right"
-            data-aos="fade-right"
+            data-aos="fade-down"
             style={{
               display: 'flex',
               maxWidth: '1080px',
@@ -177,7 +177,7 @@ export default function Sobre({ mudaScreen }) {
 
         <div
           className="left"
-          data-aos="fade-left"
+          data-aos="fade-down"
           style={{
             display: 'flex',
             maxWidth: '1080px',
@@ -219,7 +219,7 @@ export default function Sobre({ mudaScreen }) {
         </div>
       </div>
 
-      <div data-aos="fade-left" style={{ paddingTop: '80px' }}>
+      <div data-aos="fade-down" style={{ paddingTop: '80px' }}>
         <SliderGeral mudaScreen={mudaScreen} />
       </div>
 

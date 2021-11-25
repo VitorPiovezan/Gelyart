@@ -7,7 +7,7 @@ import {
   LabelShort,
   InputShort,
   ImputLongTextArea,
-} from '../styles/Styled.Revendedor';
+} from '../styles/Styled.Revendedor.js';
 import AOS from 'aos';
 export default function Revendedor({ mudaScreen }) {
   const [linkWhats, setLinkWhats] = useState('');
@@ -25,7 +25,7 @@ export default function Revendedor({ mudaScreen }) {
 
   useEffect(() => {
     setLinkWhats(
-      'https://api.whatsapp.com/send?phone=5516996163774&text=Olá,%20meu%20nome%20é%20*' +
+      'https://api.whatsapp.com/send?phone=5516997662393&text=Olá,%20meu%20nome%20é%20*' +
         name +
         '*,%20tenho%20interesse%20em%20ser%20revendedor!%20Segue%20os%20Dados:%0a%0a*Nome:*%20' +
         name +

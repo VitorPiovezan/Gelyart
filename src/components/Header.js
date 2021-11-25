@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Header as Head, NavLink, LinkHeader } from '../styles/Styled.Header';
+import {
+  Header as Head,
+  NavLink,
+  LinkHeader,
+} from '../styles/Styled.Header.js';
 import { Link } from 'react-router-dom';
-import { MenuDeviceComponent } from './MenuDevice';
-import { HandleScroll } from '../configs/configs';
+import { MenuDeviceComponent } from './MenuDevice.js';
+import { HandleScroll } from '../configs/configs.js';
 
 export default function Header({
   colorheader,
