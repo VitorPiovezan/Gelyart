@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { HandleScroll } from '../configs/configs';
+import { HandleScroll } from '../configs/configs.js';
 import AOS from 'aos';
 import { useEffect } from 'react';
 
@@ -19,7 +19,7 @@ export default function RevendedorHome({ mudaScreen }) {
         }}
       >
         <img
-          data-aos="zoom-out-right"
+          data-aos="zoom-out-down"
           alt="frezer"
           src="/img/produtos/freezer-horizontal-vertical-gellyart-min.png"
           style={{
@@ -48,7 +48,7 @@ export default function RevendedorHome({ mudaScreen }) {
           }}
         >
           <div
-            data-aos="fade-left"
+            data-aos="fade-down"
             style={{
               width: '30%',
               marginLeft: `${mudaScreen ? '65%' : ''}`,

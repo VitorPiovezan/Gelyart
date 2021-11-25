@@ -1,15 +1,15 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Container } from '../styles/Styled.Home';
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+import { Container } from '../styles/Styled.Home.js';
 import { Link } from 'react-router-dom';
 import {
   InputLong,
   LabelLong,
   LabelShort,
   InputShort,
-} from '../styles/Styled.Revendedor';
+} from '../styles/Styled.Revendedor.js';
 import AOS from 'aos';
 export default function Revendedor({ mudaScreen }) {
   const [linkWhats, setLinkWhats] = useState('');

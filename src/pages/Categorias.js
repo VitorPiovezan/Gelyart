@@ -1,16 +1,16 @@
 import { useParams } from 'react-router-dom';
-import { categorias } from '../data/data';
+import { categorias } from '../data/data.js';
 import { useState, useEffect } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
 import '../index.css';
 import {
   CardProduct,
   ImgProduct,
   ProdutosList,
-} from '../styles/Styled.Categorias';
-import LinhaProdutosHome from '../components/LinhaProdutos.Home';
-import { ContainerHome } from '../styles/Styled.Home';
+} from '../styles/Styled.Categorias.js';
+import LinhaProdutosHome from '../components/LinhaProdutos.Home.js';
+import { ContainerHome } from '../styles/Styled.Home.js';
 
 export default function Categorias({ mudaScreen }) {
   let data = useParams();

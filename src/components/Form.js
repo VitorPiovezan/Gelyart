@@ -7,7 +7,7 @@ import {
   LabelShort,
   InputShort,
   ImputLongTextArea,
-} from '../styles/Styled.Revendedor';
+} from '../styles/Styled.Revendedor.js';
 import AOS from 'aos';
 export default function Revendedor({ mudaScreen }) {
   const [linkWhats, setLinkWhats] = useState('');

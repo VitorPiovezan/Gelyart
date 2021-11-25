@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Container } from '../styles/Styled.Home';
-import Form from '../components/Form';
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+import { Container } from '../styles/Styled.Home.js';
+import Form from '../components/Form.js';
 export default function FaleConosco({ mudaScreen }) {
   return (
     <Container>

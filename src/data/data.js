@@ -111,6 +111,48 @@ export const categorias = [
   },
   {
     id: 6,
+    link: 'picole-especial',
+    weigth: '6og',
+    name: 'Picolés Especiais',
+    banner: '/img/banners/picole_especial_mini_banner.png',
+    img_product: '/img/produtos/picole-especial.png',
+    produtos: [
+      {
+        id: 1,
+        name: 'Petit Gateau',
+      },
+      {
+        id: 2,
+        name: 'Brigadeiro',
+      },
+      {
+        id: 3,
+        name: 'Skimo - Coco com cobertura de chocolate',
+      },
+      {
+        id: 4,
+        name: 'Tablet`s - Banilha, chocolate branco e preto',
+      },
+      {
+        id: 5,
+        name: 'Napolitano',
+      },
+      {
+        id: 6,
+        name: 'Maximum - Baunilha e chocolate',
+      },
+      {
+        id: 7,
+        name: 'Maximum - Branco',
+      },
+      {
+        id: 8,
+        name: 'Ouro Preto - Chocolate holandes com cobertura de castanhas',
+      },
+    ],
+  },
+  {
+    id: 7,
     link: 'moreninha',
     weigth: '85 gr',
     name: 'Moreninha',
@@ -124,7 +166,7 @@ export const categorias = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     link: 'yogurtin',
     weigth: '80g',
     name: 'Yogurtin',
@@ -150,7 +192,7 @@ export const categorias = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     link: 'sundae',
     weigth: '150 gr',
     name: 'Sundae',
@@ -164,7 +206,7 @@ export const categorias = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     link: 'picole-leite',
     weigth: '65g',
     name: 'Picolé ao Leite',
@@ -186,7 +228,7 @@ export const categorias = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     link: 'trufados',
     weigth: '1,5 Litros',
     name: 'Trufados',
@@ -204,7 +246,7 @@ export const categorias = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     link: 'cones',
     weigth: '80g',
     name: 'Cones',
@@ -222,7 +264,7 @@ export const categorias = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     link: 'ituzinho',
     weigth: '62g',
     name: 'Ituzinho',
@@ -244,7 +286,7 @@ export const categorias = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     link: 'bombom-gelado',
     weigth: '100g',
     name: 'Bombom Gelado',
@@ -258,7 +300,7 @@ export const categorias = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     link: 'bolo-sorvete',
     weigth: '1 Litro',
     name: 'Bolo de Sorvete',
@@ -272,7 +314,7 @@ export const categorias = [
     ],
   },
   {
-    id: 15,
+    id: 16,
     link: 'kids',
     weigth: '65g',
     name: 'Kids',
@@ -290,7 +332,7 @@ export const categorias = [
     ],
   },
   {
-    id: 16,
+    id: 17,
     link: 'caixas',
     weigth: '5 e 10 Litros',
     name: 'Caixas',
@@ -307,7 +349,7 @@ export const sobre = [
   },
   {
     id: 2,
-    banner: '/img/banners/sobre2.jpeg',
+    banner: '/img/banners/sobre6.jpeg',
   },
   {
     id: 3,
@@ -320,5 +362,13 @@ export const sobre = [
   {
     id: 5,
     banner: '/img/banners/sobre5.jpeg',
+  },
+  {
+    id: 6,
+    banner: '/img/banners/sobre2.jpeg',
+  },
+  {
+    id: 7,
+    banner: '/img/banners/sobre7.jpeg',
   },
 ];

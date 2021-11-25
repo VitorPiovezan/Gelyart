@@ -1,11 +1,11 @@
-import { categorias } from '../data/data';
+import { categorias } from '../data/data.js';
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { ImgSlider, DivSlider, ProdutosSlider } from '../styles/Styled.Home';
+import { ImgSlider, DivSlider, ProdutosSlider } from '../styles/Styled.Home.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import { SampleNextArrow, SamplePrevArrow } from '../configs/configs';
+import { SampleNextArrow, SamplePrevArrow } from '../configs/configs.js';
 
 export default function LinhaProdutosHome({
   maxView,

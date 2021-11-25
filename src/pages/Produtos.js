@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Container } from '../styles/Styled.Home';
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+import { Container } from '../styles/Styled.Home.js';
 import { Link, useHistory } from 'react-router-dom';
 import AOS from 'aos';
 export default function Produtos({ mudaScreen }) {
@@ -52,7 +52,7 @@ export default function Produtos({ mudaScreen }) {
       />
 
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -76,7 +76,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-right"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -100,7 +100,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -124,7 +124,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-right"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -148,7 +148,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -171,7 +171,30 @@ export default function Produtos({ mudaScreen }) {
         />
       </div>
       <div
-        data-aos="fade-right"
+        data-aos="fade-down"
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          cursor: 'pointer',
+        }}
+        onClick={() => handleClick(`/produtos/picole-especial`)}
+      >
+        <img
+          alt="background"
+          src={
+            mudaScreen
+              ? '/img/banners/picole_especial_banner_produtos.png'
+              : '/img/banners/picole_especial_banner_produtos.png'
+          }
+          style={{
+            width: '100%',
+            maxWidth: '100%',
+          }}
+        />
+      </div>
+      <div
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -185,7 +208,7 @@ export default function Produtos({ mudaScreen }) {
           src={
             mudaScreen
               ? '/img/banners/picole_leite_banner_produtos.png'
-              : '/img/banners/picolé_leite_banner_produtos.png'
+              : '/img/banners/picole_leite_banner_produtos.png'
           }
           style={{
             width: '100%',
@@ -195,7 +218,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -219,7 +242,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-right"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -243,7 +266,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -267,7 +290,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-right"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -291,7 +314,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -315,7 +338,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-right"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -339,7 +362,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -363,7 +386,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-right"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -387,7 +410,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',
@@ -411,7 +434,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <div
-        data-aos="fade-right"
+        data-aos="fade-down"
         style={{
           width: '100%',
           display: 'flex',

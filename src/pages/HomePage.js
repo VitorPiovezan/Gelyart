@@ -1,9 +1,9 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import RevendedorHome from '../components/Revendedor.Home';
-import { ContainerHome, Container } from '../styles/Styled.Home';
-import LinhaProdutosHome from '../components/LinhaProdutos.Home';
-import { HandleScroll } from '../configs/configs';
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+import RevendedorHome from '../components/Revendedor.Home.js';
+import { ContainerHome, Container } from '../styles/Styled.Home.js';
+import LinhaProdutosHome from '../components/LinhaProdutos.Home.js';
+import { HandleScroll } from '../configs/configs.js';
 import { Link } from 'react-router-dom';
 import '../index.css';
 import AOS from 'aos';
@@ -74,7 +74,7 @@ export default function HomePage({ mudaScreen }) {
 
           <ContainerHome>
             <h1
-              data-aos="fade-left"
+              data-aos="fade-down"
               id="produtos"
               style={{
                 color: '#286198',

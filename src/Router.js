@@ -37,9 +37,6 @@ export default function App() {
         <Route path="/produtos/:name">
           <Categorias mudaScreen={mudaScreen} />
         </Route>
-        <Route path="/home">
-          <HomePage mudaScreen={mudaScreen} />
-        </Route>
         <Route path="/seja-um-revendedor">
           <Revendedor mudaScreen={mudaScreen} />
         </Route>
@@ -49,7 +46,10 @@ export default function App() {
         <Route path="/produtos">
           <Produtos mudaScreen={mudaScreen} />
         </Route>
-        <Redirect to={{ pathname: '/home' }} />
+        <Route path="/">
+          <HomePage mudaScreen={mudaScreen} />
+        </Route>
+        <Redirect to={{ pathname: '/' }} />
       </Switch>
     </Router>
   );
