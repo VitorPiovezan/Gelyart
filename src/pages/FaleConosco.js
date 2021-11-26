@@ -1,10 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
 import { Container } from '../styles/Styled.Home.js';
 import Form from '../components/Form.js';
 export default function FaleConosco({ mudaScreen }) {
-  return (
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, 500);
+
+ return (
+    <>
+      {loading ? (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+            flexDirection: 'column',
+          }}
+        >
+          <img
+            src="/img/logotipo.png"
+            alt="logo"
+            width="200px"
+            style={{ marginTop: '-150px' }}
+          />
+          <img
+            src="/img/loading.png"
+            className="App-logo"
+            alt="loading"
+            style={{ width: '100px', height: '100px' }}
+          />
+        </div>
+      ) : (
     <Container>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <img
@@ -31,6 +61,7 @@ export default function FaleConosco({ mudaScreen }) {
       <Form />
 
       <Footer mudaScreen={mudaScreen} />
-    </Container>
+    </Container>)}
+    </>
   );
 }

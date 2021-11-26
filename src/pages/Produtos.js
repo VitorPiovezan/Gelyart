@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
 import { Container } from '../styles/Styled.Home.js';
@@ -6,6 +6,10 @@ import { useHistory } from 'react-router-dom';
 import AOS from 'aos';
 export default function Produtos({ mudaScreen }) {
   const history = useHistory();
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, 500);
 
   useEffect(() => {
     AOS.init({
@@ -20,7 +24,32 @@ export default function Produtos({ mudaScreen }) {
       top: 0,
     });
   };
-  return (
+return (
+    <>
+      {loading ? (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+            flexDirection: 'column',
+          }}
+        >
+          <img
+            src="/img/logotipo.png"
+            alt="logo"
+            width="300px"
+            style={{ marginTop: '-150px' }}
+          />
+          <img
+            src="/img/loading.png"
+            className="App-logo"
+            alt="loading"
+            style={{ width: '100px', height: '100px' }}
+          />
+        </div>
+      ) : (
     <Container>
       <div
         style={{
@@ -458,6 +487,7 @@ export default function Produtos({ mudaScreen }) {
       </div>
 
       <Footer mudaScreen={mudaScreen} />
-    </Container>
+    </Container>)}
+    </>
   );
 }

@@ -4,14 +4,46 @@ import Footer from '../components/Footer.js';
 import { Container } from '../styles/Styled.Home.js';
 import SliderGeral from '../components/Slider.js';
 import AOS from 'aos';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 export default function Sobre({ mudaScreen }) {
+
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, 500);
+
   useEffect(() => {
     AOS.init({
       duration: 3000,
     });
   }, []);
+
   return (
+    <>
+      {loading ? (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+            flexDirection: 'column',
+          }}
+        >
+          <img
+            src="/img/logotipo.png"
+            alt="logo"
+            width="300px"
+            style={{ marginTop: '-150px' }}
+          />
+          <img
+            src="/img/loading.png"
+            className="App-logo"
+            alt="loading"
+            style={{ width: '100px', height: '100px' }}
+          />
+        </div>
+      ) : (
     <Container>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <img
@@ -133,7 +165,7 @@ export default function Sobre({ mudaScreen }) {
         ) : (
           <div
             className="right"
-            data-aos="fade-down"
+            data-aos="fade-right"
             style={{
               display: 'flex',
               maxWidth: '1080px',
@@ -317,6 +349,6 @@ se tornou uma Indústria que atua
       </div> */}
 
       <Footer mudaScreen={mudaScreen} />
-    </Container>
+    </Container>)}</>
   );
 }

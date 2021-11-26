@@ -18,6 +18,10 @@ export default function Revendedor({ mudaScreen }) {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
   const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, 500);
 
   useEffect(() => {
     AOS.init({
@@ -27,7 +31,7 @@ export default function Revendedor({ mudaScreen }) {
 
   useEffect(() => {
     setLinkWhats(
-      'https://api.whatsapp.com/send?phone=5516996163774&text=Olá,%20meu%20nome%20é%20*' +
+      'https://api.whatsapp.com/send?phone=5516997662393&text=Olá,%20meu%20nome%20é%20*' +
         name +
         '*,%20tenho%20interesse%20em%20ser%20revendedor!%20Segue%20os%20Dados:%0a%0a*Nome:*%20' +
         name +
@@ -58,7 +62,33 @@ export default function Revendedor({ mudaScreen }) {
       window.open(linkWhats, '_blank');
     }
   }
-  return (
+
+return (
+    <>
+      {loading ? (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+            flexDirection: 'column',
+          }}
+        >
+          <img
+            src="/img/logotipo.png"
+            alt="logo"
+            width="300px"
+            style={{ marginTop: '-150px' }}
+          />
+          <img
+            src="/img/loading.png"
+            className="App-logo"
+            alt="loading"
+            style={{ width: '100px', height: '100px' }}
+          />
+        </div>
+      ) : (
     <Container>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <img
@@ -204,6 +234,7 @@ export default function Revendedor({ mudaScreen }) {
       </div>
 
       <Footer mudaScreen={mudaScreen} />
-    </Container>
+    </Container>)}
+    </>
   );
 }
