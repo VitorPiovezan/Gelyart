@@ -49,12 +49,12 @@ jobs:
           path: ./build
           destination: gelyartsorvetes.com.br
 
-      - name: Allow AllUsers
-        run: gsutil -m acl ch -R -u AllUsers:R gs://"$BUCKET"
+#       - name: Allow AllUsers
+#         run: gsutil -m acl ch -R -u AllUsers:R gs://"$BUCKET"
         
-      - name: Set Cache-Control
-        run: gsutil -m setmeta -h "Cache-Control:public, max-age=15768000" gs://"$BUCKET"/**/*.{png,css,js,jpeg}
+#       - name: Set Cache-Control
+#         run: gsutil -m setmeta -h "Cache-Control:public, max-age=15768000" gs://"$BUCKET"/**/*.{png,css,js,jpeg}
         
-      - name: Set Cache-Control
-        run: gsutil setmeta -h "Cache-Control:no-cache, no-store" gs://"$BUCKET"/index.html
+#       - name: Set Cache-Control
+#         run: gsutil setmeta -h "Cache-Control:no-cache, no-store" gs://"$BUCKET"/index.html
         
