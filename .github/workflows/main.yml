@@ -50,7 +50,7 @@ jobs:
           destination: gelyartsorvetes.com.br
 
       - name: CP Datas
-        run: gsutil cp -R gs://gelyartsorvetes.com.br/build/* gs://gelyartsorvetes.com.br/*
+        run: gsutil cp -R gs://gelyartsorvetes.com.br/build/* gs://gelyartsorvetes.com.br/
 
       - name: Allow Users
         run: gsutil acl ch -u AllUsers:R gs://gelyartsorvetes.com.br/**
