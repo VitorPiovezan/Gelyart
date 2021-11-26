@@ -1,10 +1,7 @@
 import { sobre } from '../data/data';
-import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
-  ImgSlider,
-  DivSlider,
-  ProdutosSlider,
   ImgSliderGeral,
   ProdutosSliderGeral,
   DivSliderGeral,
@@ -12,7 +9,6 @@ import {
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import { SampleNextArrow, SamplePrevArrow } from '../configs/configs';
 
 export default function SliderGeral({ mudaScreen, action }) {
   //configurações do slider

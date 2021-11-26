@@ -4,11 +4,7 @@ import { useState, useEffect } from 'react';
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
 import '../index.css';
-import {
-  CardProduct,
-  ImgProduct,
-  ProdutosList,
-} from '../styles/Styled.Categorias.js';
+import { ProdutosList } from '../styles/Styled.Categorias.js';
 import LinhaProdutosHome from '../components/LinhaProdutos.Home.js';
 import { ContainerHome } from '../styles/Styled.Home.js';
 
@@ -17,7 +13,6 @@ export default function Categorias({ mudaScreen }) {
   const [arrayCategoria, setArrayCategoria] = useState({});
   const [produtosOnly, setProdutosOnly] = useState(false);
   const [active, setActive] = useState(false);
-  const [arrayAtiva, setArrayAtiva] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

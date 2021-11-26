@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
 import { Container } from '../styles/Styled.Home.js';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import AOS from 'aos';
 export default function Produtos({ mudaScreen }) {
   const history = useHistory();

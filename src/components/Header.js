@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
-import {
-  Header as Head,
-  NavLink,
-  LinkHeader,
-} from '../styles/Styled.Header.js';
+import { Header as Head, LinkHeader } from '../styles/Styled.Header.js';
 import { Link } from 'react-router-dom';
 import { MenuDeviceComponent } from './MenuDevice.js';
 import { HandleScroll } from '../configs/configs.js';
