@@ -16,6 +16,7 @@ export default function Categorias({ mudaScreen }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // eslint-disable-next-line array-callback-return
     categorias.map(item => {
       if (item.link === data.name) {
         if (item.produtos !== undefined) {
@@ -24,7 +25,6 @@ export default function Categorias({ mudaScreen }) {
         setArrayCategoria(item);
       }
     });
-    console.log(arrayCategoria);
   }, [data]);
 
   setTimeout(() => {

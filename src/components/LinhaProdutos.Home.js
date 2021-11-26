@@ -46,24 +46,27 @@ export default function LinhaProdutosHome({
   return (
     <ProdutosSlider widthScreen={`${mudaScreen ? '90%' : '100%'}`}>
       <Slider {...settings}>
-        {categorias.map(item => {
-          if (item.link !== action) {
-            return (
-              <div key={item.id} style={{ width: '100%' }}>
-                <div
-                  onMouseMove={() => setMouseMoved(true)}
-                  onMouseDown={() => setMouseMoved(false)}
-                  onMouseUp={() => handleClick(`/produtos/${item.link}`)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  <DivSlider>
-                    <ImgSlider alt={item.name} src={item.banner} />
-                  </DivSlider>
+        {
+          // eslint-disable-next-line array-callback-return
+          categorias.map(item => {
+            if (item.link !== action) {
+              return (
+                <div key={item.id} style={{ width: '100%' }}>
+                  <div
+                    onMouseMove={() => setMouseMoved(true)}
+                    onMouseDown={() => setMouseMoved(false)}
+                    onMouseUp={() => handleClick(`/produtos/${item.link}`)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <DivSlider>
+                      <ImgSlider alt={item.name} src={item.banner} />
+                    </DivSlider>
+                  </div>
                 </div>
-              </div>
-            );
-          }
-        })}
+              );
+            }
+          })
+        }
       </Slider>
     </ProdutosSlider>
   );
