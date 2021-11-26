@@ -46,7 +46,7 @@ jobs:
         id: upload-files
         uses: google-github-actions/upload-cloud-storage@v0.4.0
         with:
-          path: ./build
+          path: ./
           destination: gelyartsorvetes.com.br
 
 #       - name: Allow AllUsers
