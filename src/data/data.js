@@ -361,14 +361,18 @@ export const sobre = [
   },
   {
     id: 5,
-    banner: '/img/banners/sobre5.jpeg',
+    banner: '/img/banners/sobre5.jpg',
   },
   {
     id: 6,
-    banner: '/img/banners/sobre2.jpeg',
+    banner: '/img/banners/sobre8.jpg',
   },
   {
     id: 7,
     banner: '/img/banners/sobre7.jpeg',
+  },
+  {
+    id: 8,
+    banner: '/img/banners/sobre2.jpeg',
   },
 ];
